@@ -2,9 +2,11 @@
 @import 'mixins'
 @import 'reset'
 
-body
+html
   font-size: $fontSize
   color: $black
+
+body
   background-color: $white
 
 h1
@@ -35,7 +37,7 @@ aside
 
 nav
   justify-content: center
-  background-color: rgba($white, .6)
+  background-color: rgba($white, .9)
   max-height: 0
   overflow: hidden
   border-bottom-width: 1px
@@ -43,63 +45,64 @@ nav
   border-bottom-color: transparent
   transition: max-height 500ms ease-in-out, border-color 400ms ease
   &.active
-    max-height: 400px
+    max-height: 800px
     border-bottom-color: $lightgrey
+  ul
+    width: 100%
   li
     text-align: center
   a
     color: $black
     display: inline-block
-    padding-top: 40px
+    padding-top: 22px
+    padding-bottom: 22px
     width: 100%
     text-decoration: none
+    font-size: .7rem
+    +caps
+    &:active
+      background-color: rgba($lightgrey, .5)
+  li:first-child > a
+    padding-top: 30px
   li:last-child > a
-    padding-bottom: 40px
-
-// .icon, nav
-//   border: 1px dashed grey
+    padding-bottom: 30px
 
 
-@media (min-width: 1600px)
+@media (min-width: 1200px)
   aside
-    position: fixed
-    right: 0
-    top: 0
     bottom: 0
-    z-index: 1
+    left: auto
     background-color: $white
-    display: flex
+    flex-direction: row
     justify-content: center
     align-items: stretch
     border-right: 1px solid $lightgrey
-
-  .icon, nav
-    display: flex
-    align-items: center
 
   .icon
     justify-content: center
     border-left: 1px solid $lightgrey
 
   nav
-    justify-content: flex-start
-
-  nav
     max-width: 0
+    max-height: none
+    align-items: center
     transition: max-width 500ms linear, border-color 400ms ease
-    overflow: hidden
+    border: none
     border-left-width: 1px
     border-left-style: solid
     border-left-color: transparent
     &.active
+      max-height: none
       max-width: 400px
       border-left-color: $lightgrey
     ul
       margin-left: 50px
       margin-right: 140px
+      width: auto
     li
-      white-space: nowrap
       padding-bottom: 20px
+      text-align: left
+      white-space: nowrap
       transform: translateX(40px)
       opacity: 0
       font-weight: bold
@@ -111,11 +114,22 @@ nav
       &.show
         transform: none
         opacity: 1
+    li:first-child > a
+      padding-top: 0
+    li:last-child
+      padding-bottom: 0
+      & > a
+        padding-bottom: 0
     a
-      color: $black
+      padding: 0
+      padding-top: 20px
+      text-transform: none
+      font-size: 1rem
       font-weight: bold
-      text-decoration: none
       position: relative
+      width: auto
+      &:active
+        background-color: $white
       &::after
         content: ''
         background-color: $black
@@ -141,7 +155,7 @@ nav
 .hamburger div
   top: 48%
 
-.hamburger div, .hamburger div:before, .hamburger div:after
+.hamburger div, .hamburger div::before, .hamburger div::after
   position: absolute
   width: 35px
   height: 2px

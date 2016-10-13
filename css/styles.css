@@ -45,9 +45,11 @@ table {
 textarea {
   resize: none; }
 
-body {
+html {
   font-size: 26px;
-  color: #010101;
+  color: #010101; }
+
+body {
   background-color: #fff; }
 
 h1 {
@@ -91,7 +93,7 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   max-height: 0;
   overflow: hidden;
   border-bottom-width: 1px;
@@ -99,30 +101,36 @@ nav {
   border-bottom-color: transparent;
   transition: max-height 500ms ease-in-out, border-color 400ms ease; }
   nav.active {
-    max-height: 400px;
+    max-height: 800px;
     border-bottom-color: #CFCFCF; }
+  nav ul {
+    width: 100%; }
   nav li {
     text-align: center; }
   nav a {
     color: #010101;
     display: inline-block;
-    padding-top: 40px;
+    padding-top: 22px;
+    padding-bottom: 22px;
     width: 100%;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase; }
+    nav a:active {
+      background-color: rgba(207, 207, 207, 0.5); }
+  nav li:first-child > a {
+    padding-top: 30px; }
   nav li:last-child > a {
-    padding-bottom: 40px; }
+    padding-bottom: 30px; }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   aside {
-    position: fixed;
-    right: 0;
-    top: 0;
     bottom: 0;
-    z-index: 1;
+    left: auto;
     background-color: #fff;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -131,14 +139,6 @@ nav {
             align-items: stretch;
     border-right: 1px solid #CFCFCF; }
 
-  .icon, nav {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
   .icon {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -146,26 +146,28 @@ nav {
     border-left: 1px solid #CFCFCF; }
 
   nav {
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-
-  nav {
     max-width: 0;
+    max-height: none;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     transition: max-width 500ms linear, border-color 400ms ease;
-    overflow: hidden;
+    border: none;
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: transparent; }
     nav.active {
+      max-height: none;
       max-width: 400px;
       border-left-color: #CFCFCF; }
     nav ul {
       margin-left: 50px;
-      margin-right: 140px; }
+      margin-right: 140px;
+      width: auto; }
     nav li {
-      white-space: nowrap;
       padding-bottom: 20px;
+      text-align: left;
+      white-space: nowrap;
       -webkit-transform: translateX(40px);
           -ms-transform: translateX(40px);
               transform: translateX(40px);
@@ -183,11 +185,22 @@ nav {
             -ms-transform: none;
                 transform: none;
         opacity: 1; }
+    nav li:first-child > a {
+      padding-top: 0; }
+    nav li:last-child {
+      padding-bottom: 0; }
+      nav li:last-child > a {
+        padding-bottom: 0; }
     nav a {
-      color: #010101;
+      padding: 0;
+      padding-top: 20px;
+      text-transform: none;
+      font-size: 1rem;
       font-weight: bold;
-      text-decoration: none;
-      position: relative; }
+      position: relative;
+      width: auto; }
+      nav a:active {
+        background-color: #fff; }
       nav a::after {
         content: "";
         background-color: #010101;
@@ -212,7 +225,7 @@ nav {
 .hamburger div {
   top: 48%; }
 
-.hamburger div, .hamburger div:before, .hamburger div:after {
+.hamburger div, .hamburger div::before, .hamburger div::after {
   position: absolute;
   width: 35px;
   height: 2px;
