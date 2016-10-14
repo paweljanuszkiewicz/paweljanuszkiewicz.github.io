@@ -293,6 +293,7 @@ section p {
   margin: 0 20px;
   padding-bottom: 10px; }
 section a {
+  white-space: nowrap;
   color: #010101;
   text-decoration: none;
   border-bottom: 1px solid #010101;
