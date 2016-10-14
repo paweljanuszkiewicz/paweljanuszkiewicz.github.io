@@ -245,23 +245,33 @@ nav {
         width: 100%; } }
 section {
   padding-top: 75px;
-  display: block; }
+  display: block;
+  min-height: 100vh;
+  height: auto !important;
+  border: 1px solid red; }
 
 h1 {
   font-size: 2.4rem;
   color: #010101;
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 20px;
   text-align: right;
   margin: 0 10px;
   padding: 30px 0; }
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #010101; }
 
 p {
   margin: 0 10px;
   line-height: 1.16rem;
   font-size: 0.7rem;
   text-align: left;
-  color: #8b8b8b; }
+  color: #8b8b8b;
+  padding-bottom: 30px; }
 
 .section:first-child {
   display: -webkit-flex;
