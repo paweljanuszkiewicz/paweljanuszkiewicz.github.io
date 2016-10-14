@@ -253,6 +253,10 @@ section {
   min-height: 100vh;
   height: auto !important; }
 
+section:last-child {
+  min-height: 0;
+  border: 1px solid red; }
+
 h1 {
   font-size: 2.4rem;
   color: #010101;
