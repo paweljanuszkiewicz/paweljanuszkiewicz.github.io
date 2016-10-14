@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
       anchors:['start', 'about', 'skills', 'js', 'psd', 'contact'],
+      verticalCentered: false,
+      responsiveWidth: 800,
       afterLoad: function(anchor, index){
         var $activeItem;
         $activeItem = $('nav').find('a[href="#' + anchor + '"]');
@@ -13,6 +15,7 @@ $(document).ready(function() {
   });
 
   $('nav a').on('click', function () {
+    $('.hamburger').menuHide();
     $(this).addClass('active');
   });
 

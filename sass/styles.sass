@@ -1,6 +1,7 @@
 @import 'variables'
 @import 'mixins'
 @import 'reset'
+@import 'hamburger'
 
 html
   font-size: $fontSize
@@ -8,12 +9,6 @@ html
 
 body
   background-color: $white
-
-h1
-  padding: 20px
-  text-align: center
-  margin-top: 20px
-  background-color: pink
 
 .container
   margin: 0 auto
@@ -33,6 +28,7 @@ aside
 
 .icon
   justify-content: flex-end
+  background-color: $white
   border-bottom: 1px solid $lightgrey
 
 nav
@@ -62,11 +58,6 @@ nav
     +caps
     &:active
       background-color: rgba($lightgrey, .5)
-  li:first-child > a
-    padding-top: 30px
-  li:last-child > a
-    padding-bottom: 30px
-
 
 @media (min-width: 1200px)
   aside
@@ -118,8 +109,6 @@ nav
       padding-top: 0
     li:last-child
       padding-bottom: 0
-      & > a
-        padding-bottom: 0
     a
       padding: 0
       padding-top: 20px
@@ -143,40 +132,37 @@ nav
       &:hover::after, &.active::after
         width: 100%
 
-.hamburger
-  display: inline-block
-  width: 35px
-  height: 35px
-  margin: 20px
-  z-index: 1
-  cursor: pointer
-  position: relative
 
-.hamburger div
-  top: 48%
+section
+  padding-top: 75px
 
-.hamburger div, .hamburger div::before, .hamburger div::after
-  position: absolute
-  width: 35px
-  height: 2px
-  background-color: $grey
-  transition: all 400ms ease-in-out
+h1
+  font-size: 2.4rem
+  color: $black
+  padding-top: 30px
+  padding-bottom: 20px
+  text-align: right
+  margin: 0 10px
+  padding: 30px 0
 
-.hamburger div:before, .hamburger div:after
-  content: ''
+p
+  margin: 0 10px
+  line-height: 1.16rem
+  font-size: .7rem
+  text-align: left
+  color: $grey
 
-.hamburger div:before
-  top: -12px
+.section:first-child
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-flow: column
+  h1, p
+    padding: 0
+    text-align: center
+  h1
+    padding-bottom: 10px
 
-.hamburger div:after
-  bottom: -12px
-
-.hamburger.active
-  div
-    background-color: transparent
-  div:before
-    top: 0
-    transform: rotate(45deg)
-  div:after
-    bottom: 0
-    transform: rotate(-45deg)
+.section:nth-child(3)
+  h1
+    font-size: 2rem

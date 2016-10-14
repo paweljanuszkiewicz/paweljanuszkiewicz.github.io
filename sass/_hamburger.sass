@@ -1,0 +1,37 @@
+.hamburger
+  display: inline-block
+  width: 35px
+  height: 35px
+  margin: 20px
+  z-index: 1
+  cursor: pointer
+  position: relative
+
+.hamburger div
+  top: 48%
+
+.hamburger div, .hamburger div::before, .hamburger div::after
+  position: absolute
+  width: 35px
+  height: 2px
+  background-color: $grey
+  transition: all 400ms ease-in-out
+
+.hamburger div:before, .hamburger div:after
+  content: ''
+
+.hamburger div:before
+  top: -12px
+
+.hamburger div:after
+  bottom: -12px
+
+.hamburger.active
+  div
+    background-color: transparent
+  div:before
+    top: 0
+    transform: rotate(45deg)
+  div:after
+    bottom: 0
+    transform: rotate(-45deg)
