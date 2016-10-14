@@ -25,6 +25,7 @@ html(lang='pl')
       section.section(data-anchor='start')
         h1 Welcome!
         p Click on menu or slide!
+        img(src='images/arrow-2px.png').arrow
       section.section(data-anchor='about')
         h1 O mnie
         p Nazywam się Paweł Januszkiewicz i aspiruje do miana front-end developera. 
@@ -57,22 +58,23 @@ html(lang='pl')
             li W pracy nad projektami korzystam ponadto z: edytora Atom, Adobe Photoshopa (warstwy, narzędzia główne, plastry), repozytorium Git (podstawowe polecenia w konsoli), narzędzia DevTools w Chromie oraz Gulpa (podstawy)
       section.section(data-anchor='js')
         h1 JS
-        p Projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
-        figure
-          img
-          figcaption 
-            h3 15puzzles
-            p Układanka oparta na "natywnym" JS
-        figure
-          img
-          figcaption 
-            h3 Gallery
-            p Galeria zdjęć oparta o jQuery
-        figure
-          img
-          figcaption 
-            h3 StickyNotes
-            p Projekt oparty o natywny JS (nowe metody DOM)
+        .flex-projects
+          p Projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
+          figure
+            img(src='images/15puzzles.jpg')
+            figcaption 
+              h3 15puzzles
+              p Układanka oparta na "natywnym" JS
+          figure
+            img(src='images/squaresGallery.jpg')
+            figcaption 
+              h3 Gallery
+              p Galeria zdjęć oparta o jQuery
+          figure
+            img(src='images/stickyNotes.jpg')
+            figcaption 
+              h3 StickyNotes
+              p Projekt oparty o natywny JS (nowe metody DOM)
               
       section.section(data-anchor='psd')
         h1 PSD to HTML

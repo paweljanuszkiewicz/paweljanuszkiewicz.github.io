@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
-      verticalCentered: false,
+      verticalCentered: true,
       responsiveWidth: 800,
 			fitToSection: false,
       afterLoad: function(anchor, index){
