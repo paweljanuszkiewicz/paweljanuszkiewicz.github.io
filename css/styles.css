@@ -88,7 +88,8 @@ textarea {
 
 html {
   font-size: 26px;
-  color: #010101; }
+  color: #010101;
+  font-family: serif; }
 
 body {
   background-color: #fff; }
@@ -180,6 +181,9 @@ nav {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-left: 1px solid #CFCFCF; }
 
   nav {
@@ -253,11 +257,10 @@ section {
   min-height: 100vh;
   height: auto !important; }
 
-section:last-child {
-  min-height: 0;
-  border: 1px solid red; }
+.min {
+  min-height: 0; }
 
-h1 {
+section h1 {
   font-size: 2.4rem;
   color: #010101;
   padding-top: 0px;
@@ -265,20 +268,38 @@ h1 {
   text-align: right;
   margin: 0 10px;
   padding: 30px 0; }
-
-h3 {
-  font-size: 1rem;
+section h3 {
+  font-size: 0.7rem;
   font-weight: bold;
   margin-left: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   color: #010101; }
-
-p {
-  margin: 0 10px;
-  line-height: 1.16rem;
+section p, section li {
+  line-height: 1.2rem;
   font-size: 0.7rem;
   text-align: left;
-  color: #8b8b8b;
-  padding-bottom: 30px; }
+  color: #8b8b8b; }
+section ul {
+  margin-left: 10px;
+  margin-right: 10px; }
+section li {
+  padding-bottom: 2px;
+  padding-left: 14px;
+  text-indent: -12px; }
+section li::before {
+  content: "- "; }
+section p {
+  margin: 0 20px;
+  padding-bottom: 10px; }
+section a {
+  color: #010101;
+  text-decoration: none;
+  border-bottom: 1px solid #010101;
+  transition: all 400ms ease; }
+section a:hover {
+  border-color: transparent;
+  color: #8b8b8b; }
 
 .section:first-child {
   display: -webkit-flex;
