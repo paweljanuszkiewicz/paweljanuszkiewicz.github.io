@@ -3,7 +3,7 @@
 @import 'reset'
 @import 'hamburger'
 
-
+// GLOBAL (mobile and desktop)
 html
   font-size: $fontSize
   color: $black
@@ -12,38 +12,46 @@ html
 body
   background-color: $white
 
-.container
+.container-1920
   margin: 0 auto
   max-width: 1920px
+
+.container-1024
+  margin: 0 auto
+  max-width: 1024px
 
 $arrowOpacity: .4
 .arrow
   position: absolute
-  bottom: 40px
-  margin-left: auto
-  margin-right: auto
+  height: 60px
+  bottom: 0
   left: 0
   right: 0
-  animation-name: next
-  animation-timing-function: ease
-  animation-duration: 2s
-  animation-fill-mode: none
-  animation-direction: normal
-  animation-iteration-count: infinite
+  margin-left: auto
+  margin-right: auto
   cursor: pointer
-  opacity: $arrowOpacity
+  & > img
+    animation-name: next
+    animation-timing-function: ease
+    animation-duration: 2s
+    animation-fill-mode: none
+    animation-direction: normal
+    animation-iteration-count: infinite
+    transform: translateY(0)
+    opacity: $arrowOpacity
 
 @keyframes next
   0%
     transform: translateY(0)
     opacity: $arrowOpacity
-  10%
+  20%
     transform: translateY(20px)
     opacity: .08
   90%
     transform: translateY(0)
     opacity: $arrowOpacity
 
+// NAVIGATION
 aside
   position: fixed
   top: 0
@@ -67,24 +75,20 @@ nav
   border-left-width: 1px
   border-left-style: solid
   border-left-color: transparent
-  border-right-width: 4px
-  border-right-style: solid
-  border-right-color: transparent
   transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out
   &.active
     max-height: 800px
     border-left-color: $lightgrey
-    border-right-color: $grey
   ul
     width: 100%
   li
-    text-align: right
+    text-align: center
   a
     color: $black
     display: inline-block
     padding-top: 22px
     padding-bottom: 22px
-    padding-right: 22px
+    padding-left: 22px
     width: 100%
     text-decoration: none
     font-size: .7rem
@@ -92,7 +96,7 @@ nav
     &:active
       background-color: rgba($lightgrey, .5)
 
-@media (min-width: 1200px)
+@media (min-width: $mobileMenu)
   aside
     bottom: 0
     left: auto
@@ -169,24 +173,24 @@ nav
       &:hover::after, &.active::after
         width: 100%
 
+// SECTIONS
+//  all
+section.min
+  min-height: 0
 
 section
   display: block
   min-height: 100vh
-  height: auto !important
-
-.min
-  min-height: 0
-
-section
+  height: auto !important   //fullPage.js mod
+  border-bottom: 1px solid $lightgrey
   h1
     font-size: 2.4rem
     color: $black
     padding-top: 0px
     padding-bottom: 20px
     text-align: right
-    margin: 0 10px
-    padding: 30px 0
+    margin: 0 20px
+    padding: 50px 0
 
   h3
     font-size: .7rem
@@ -202,6 +206,7 @@ section
     font-size: .7rem
     text-align: left
     color: $grey
+    max-width: 800px
 
   ul
     margin-left: 10px
@@ -215,7 +220,8 @@ section
   p
     margin: 0 20px
     padding-bottom: 10px
-
+  p:last-child
+    padding-bottom: 50px
   a
     white-space: nowrap
     color: $black
@@ -226,6 +232,25 @@ section
   a:hover
     border-color: transparent
     color: $grey
+
+//  start
+.lang
+  color: $grey
+  position: absolute
+  font-family: sans-serif
+  font-size: .9rem
+  top: 28px
+  right: 20px
+  +caps
+.en, .pl
+  cursor: pointer
+  transition: color 400ms ease
+.en:hover, .pl:hover
+  color: $black
+@media (min-width: $mobileMenu)
+  .lang
+    right: auto
+    left: 20px
 
 .flex-projects
   display: flex
@@ -251,6 +276,7 @@ figure h3
   h1, p
     padding: 0
     text-align: center
+    margin: 0 auto
 
   h1
     margin-top: 100px

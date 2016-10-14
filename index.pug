@@ -21,60 +21,67 @@ html(lang='pl')
           li: a(href='#contact') Contact
       .icon
         .hamburger: div
-    #fullpage.container
+    #fullpage.container-1920
       section.section(data-anchor='start')
+        .lang
+          span.en en
+          | &nbsp;&nbsp;|&nbsp;&nbsp;
+          span.pl pl
         h1 Welcome!
         p Click on menu or slide!
-        img(src='images/arrow-2px.png').arrow
+        div.arrow: img(src='images/arrow-2px.png')
       section.section(data-anchor='about')
-        h1 O mnie
-        p Nazywam się Paweł Januszkiewicz i aspiruje do miana front-end developera. 
-        p Zainteresowanie technologiami webowymi towarzyszyło mi jeszcze od czasów gimnazjum, niestety było niejako tłem dla formalnej edukacji. 
-        p Od ponad pół roku poświęcam cały swój czas na podnoszenie poziomu znajomości technologii front-endowych. 
-        p Jako kolejny, naturalny krok rozwoju szukam pierwszego stażu/pracy w komercyjnej firmie.
-        p Aktualnie jestem skupiony na doskonaleniu umiejętności programowania w JS oraz na nauce korzystania z narzędzia automatyzacji pracy Gulp.
-        p W swoich projektach staram się dbać o intuicyjność i estetykę interfejsu użytkownika i w miarę możliwości rozwijam swoją wiedzę nt. UI oraz UX designu.
+        .container-1024
+          h1 O mnie
+          p Nazywam się Paweł Januszkiewicz i aspiruje do miana front-end developera. 
+          p Zainteresowanie technologiami webowymi towarzyszyło mi jeszcze od czasów gimnazjum, niestety było niejako tłem dla formalnej edukacji. 
+          p Od ponad pół roku poświęcam cały swój czas na podnoszenie poziomu znajomości technologii front-endowych. 
+          p Jako kolejny, naturalny krok rozwoju szukam pierwszego stażu/pracy w komercyjnej firmie.
+          p Aktualnie jestem skupiony na doskonaleniu umiejętności programowania w JS oraz na nauce korzystania z narzędzia automatyzacji pracy Gulp.
+          p W swoich projektach staram się dbać o intuicyjność i estetykę interfejsu użytkownika i w miarę możliwości rozwijam swoją wiedzę nt. UI oraz UX designu.
       section.section(data-anchor='skills')
-        h1 Umiejętności
-        div
-          h3 Html + Jade/Pug
-          ul
-            li Znajomość najpopularniejszych znaczników HTML
-            li Sprawne korzystanie z preprocesora Jade/Pug
-        div
-          h3 Css + Sass
-          ul
-            li Znajomość większości właściwości CSS oraz działania selektorów
-            li Umiejętność korzystania z dokumentacji (MDN)
-            li Ogólna znajomość flexboxa
-            li Korzystam z preprocesora SASS
-        div
-          h3 JavaScript + jQuery
-          ul
-            li Umiejętność wykonywania operacji na drzewie DOM (wyszukiwanie elementów drzewa, edycja styli, dodawanie/usuwanie klas CSS), reagowanie na zdarzenia zarówno w jQuery jak i w "czystym" JS
-        div
-          h3 Inne
-          ul
-            li W pracy nad projektami korzystam ponadto z: edytora Atom, Adobe Photoshopa (warstwy, narzędzia główne, plastry), repozytorium Git (podstawowe polecenia w konsoli), narzędzia DevTools w Chromie oraz Gulpa (podstawy)
+        .container-1024
+          h1 Umiejętności
+          div
+            h3 HTML + Jade/Pug
+            ul
+              li Znajomość najpopularniejszych znaczników HTML
+              li Sprawne korzystanie z preprocesora Jade/Pug
+          div
+            h3 CSS + SASS
+            ul
+              li Znajomość większości właściwości CSS oraz działania selektorów
+              li Umiejętność korzystania z dokumentacji (MDN)
+              li Ogólna znajomość flexboxa
+              li Korzystam z preprocesora SASS
+          div
+            h3 JavaScript + jQuery
+            ul
+              li Umiejętność wykonywania operacji na drzewie DOM (wyszukiwanie elementów drzewa, edycja styli, dodawanie/usuwanie klas CSS), reagowanie na zdarzenia zarówno w jQuery jak i w "czystym" JS
+          div
+            h3 Inne
+            ul
+              li W pracy nad projektami korzystam ponadto z: edytora Atom, Adobe Photoshopa (warstwy, narzędzia główne, plastry), repozytorium Git (podstawowe polecenia w konsoli), narzędzia DevTools w Chromie oraz Gulpa (podstawy)
       section.section(data-anchor='js')
-        h1 JS
-        .flex-projects
-          p Projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
-          figure
-            img(src='images/15puzzles.jpg')
-            figcaption 
-              h3 15puzzles
-              p Układanka oparta na "natywnym" JS
-          figure
-            img(src='images/squaresGallery.jpg')
-            figcaption 
-              h3 Gallery
-              p Galeria zdjęć oparta o jQuery
-          figure
-            img(src='images/stickyNotes.jpg')
-            figcaption 
-              h3 StickyNotes
-              p Projekt oparty o natywny JS (nowe metody DOM)
+        .container-1024
+          h1 JS
+          .flex-projects
+            p Projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
+            figure
+              img(src='images/15puzzles.jpg')
+              figcaption 
+                h3 15puzzles
+                p Układanka oparta na "natywnym" JS
+            figure
+              img(src='images/squaresGallery.jpg')
+              figcaption 
+                h3 Gallery
+                p Galeria zdjęć oparta o jQuery
+            figure
+              img(src='images/stickyNotes.jpg')
+              figcaption 
+                h3 StickyNotes
+                p Projekt oparty o natywny JS (nowe metody DOM)
               
       section.section(data-anchor='psd')
         h1 PSD to HTML
@@ -84,17 +91,17 @@ html(lang='pl')
           a(href='http://www.yebocreative.com/') www.yebocreative.com
           |, pełna treść licencji dostępna w folderach psd/ poszczególnych projektów)
         figure
-          img
+          img(src='images/astounding.png')
           figcaption 
             h3 Astounding
             p Layout oparty o opływanie elementów
           figure
-            img
+            img(src='images/bicycles.jpg')
             figcaption 
               h3 Bicycles
               p Układ strony oparty głównie na Flexboxie
           figure
-            img
+            img(src='images/utopic.jpg')
             figcaption 
               h3 UtopicFlowers
               p Strona z szablonu PSD

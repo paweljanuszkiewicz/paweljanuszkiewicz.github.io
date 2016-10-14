@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
       verticalCentered: true,
-      responsiveWidth: 800,
+      responsiveWidth: 600,
 			fitToSection: false,
       afterLoad: function(anchor, index){
         var $activeItem;
