@@ -123,6 +123,7 @@ nav {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  padding-top: 8px;
   background-color: rgba(255, 255, 255, 0.9);
   max-height: 0;
   overflow: hidden;
