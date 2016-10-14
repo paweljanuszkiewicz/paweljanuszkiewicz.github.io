@@ -120,19 +120,24 @@ aside {
   background-color: #fff; }
 
 nav {
-  -webkit-flex: 1 0 200px;
-      -ms-flex: 1 0 200px;
-          flex: 1 0 200px;
+  padding-top: 8px;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   background-color: rgba(255, 255, 255, 0.9);
   max-height: 0;
   overflow: hidden;
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: transparent;
-  transition: max-height 500ms ease-in-out, border-color 400ms ease; }
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: transparent;
+  transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out; }
   nav.active {
     max-height: 800px;
-    border-left-color: #CFCFCF; }
+    border-left-color: #CFCFCF;
+    border-right-color: #8b8b8b; }
   nav ul {
     width: 100%; }
   nav li {

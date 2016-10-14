@@ -30,17 +30,22 @@ aside
   background-color: $white
 
 nav
-  flex: 1 0 200px
+  padding-top: 8px
+  flex: 1 0 auto
   background-color: rgba($white, .9)
   max-height: 0
   overflow: hidden
   border-left-width: 1px
   border-left-style: solid
   border-left-color: transparent
-  transition: max-height 500ms ease-in-out, border-color 400ms ease
+  border-right-width: 2px
+  border-right-style: solid
+  border-right-color: transparent
+  transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out
   &.active
     max-height: 800px
     border-left-color: $lightgrey
+    border-right-color: $grey
   ul
     width: 100%
   li
