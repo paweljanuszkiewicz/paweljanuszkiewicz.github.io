@@ -120,7 +120,6 @@ aside {
   background-color: #fff; }
 
 nav {
-  padding-top: 8px;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -141,12 +140,15 @@ nav {
   nav ul {
     width: 100%; }
   nav li {
-    text-align: center; }
+    text-align: right; }
+  nav li:first-child > a {
+    padding-top: 30px; }
   nav a {
     color: #010101;
     display: inline-block;
     padding-top: 22px;
     padding-bottom: 22px;
+    padding-right: 22px;
     width: 100%;
     text-decoration: none;
     font-size: 0.7rem;

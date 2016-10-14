@@ -30,7 +30,6 @@ aside
   background-color: $white
 
 nav
-  padding-top: 8px
   flex: 1 0 auto
   background-color: rgba($white, .9)
   max-height: 0
@@ -49,12 +48,15 @@ nav
   ul
     width: 100%
   li
-    text-align: center
+    text-align: right
+  li:first-child > a
+    padding-top: 30px
   a
     color: $black
     display: inline-block
     padding-top: 22px
     padding-bottom: 22px
+    padding-right: 22px 
     width: 100%
     text-decoration: none
     font-size: .7rem
