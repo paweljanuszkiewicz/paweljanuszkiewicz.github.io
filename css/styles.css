@@ -244,7 +244,8 @@ nav {
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
 section {
-  padding-top: 75px; }
+  padding-top: 75px;
+  display: block; }
 
 h1 {
   font-size: 2.4rem;
