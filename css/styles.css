@@ -249,7 +249,6 @@ nav {
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
 section {
-  padding-top: 75px;
   display: block;
   min-height: 100vh;
   height: auto !important; }
@@ -297,4 +296,4 @@ p {
     padding-bottom: 10px; }
 
 .section:nth-child(3) h1 {
-  font-size: 2rem; }
+  font-size: 1.7rem; }
