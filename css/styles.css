@@ -100,45 +100,39 @@ body {
 aside {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
-
-.icon, nav {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
 
 .icon {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background-color: #fff;
-  border-bottom: 1px solid #CFCFCF; }
+  background-color: #fff; }
 
 nav {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-flex: 1 0 200px;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
   background-color: rgba(255, 255, 255, 0.9);
   max-height: 0;
   overflow: hidden;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: transparent;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: transparent;
   transition: max-height 500ms ease-in-out, border-color 400ms ease; }
   nav.active {
     max-height: 800px;
-    border-bottom-color: #CFCFCF; }
+    border-left-color: #CFCFCF; }
   nav ul {
     width: 100%; }
   nav li {
@@ -170,6 +164,11 @@ nav {
         -ms-flex-align: stretch;
             align-items: stretch;
     border-right: 1px solid #CFCFCF; }
+
+  .icon, nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
 
   .icon {
     -webkit-justify-content: center;
@@ -247,8 +246,7 @@ section {
   padding-top: 75px;
   display: block;
   min-height: 100vh;
-  height: auto !important;
-  border: 1px solid red; }
+  height: auto !important; }
 
 h1 {
   font-size: 2.4rem;

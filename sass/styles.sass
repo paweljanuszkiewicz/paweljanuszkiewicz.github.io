@@ -18,32 +18,29 @@ body
 aside
   position: fixed
   top: 0
-  right: 0
   left: 0
+  right: 0
   z-index: 1
   display: flex
-  flex-direction: column-reverse
-.icon, nav
-  display: flex
-  align-items: center
+  align-items: flex-start
+  justify-content: space-between
+  flex-direction: row-reverse
 
 .icon
-  justify-content: flex-end
   background-color: $white
-  border-bottom: 1px solid $lightgrey
 
 nav
-  justify-content: center
+  flex: 1 0 200px
   background-color: rgba($white, .9)
   max-height: 0
   overflow: hidden
-  border-bottom-width: 1px
-  border-bottom-style: solid
-  border-bottom-color: transparent
+  border-left-width: 1px
+  border-left-style: solid
+  border-left-color: transparent
   transition: max-height 500ms ease-in-out, border-color 400ms ease
   &.active
     max-height: 800px
-    border-bottom-color: $lightgrey
+    border-left-color: $lightgrey
   ul
     width: 100%
   li
@@ -69,6 +66,9 @@ nav
     justify-content: center
     align-items: stretch
     border-right: 1px solid $lightgrey
+
+  .icon, nav
+    display: flex
 
   .icon
     justify-content: center
@@ -139,7 +139,6 @@ section
   display: block
   min-height: 100vh
   height: auto !important
-  +mark
 
 h1
   font-size: 2.4rem
