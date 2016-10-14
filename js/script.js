@@ -4,6 +4,7 @@ $(document).ready(function() {
       verticalCentered: true,
       responsiveWidth: 600,
 			fitToSection: false,
+      scrollingSpeed: 1000,
       afterLoad: function(anchor, index){
         var $activeItem;
         $activeItem = $('nav').find('a[href="#' + anchor + '"]');
@@ -15,6 +16,9 @@ $(document).ready(function() {
     }
   });
 
+  $('.arrow').on('click', function () {
+    $.fn.fullpage.moveSectionDown();
+  });
   $('nav a').on('click', function () {
     $('.hamburger').menuHide();
     $(this).addClass('active');
