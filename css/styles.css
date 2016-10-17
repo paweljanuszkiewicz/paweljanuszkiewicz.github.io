@@ -112,6 +112,8 @@ body {
   margin-right: auto;
   cursor: pointer; }
   .arrow > img {
+    display: block;
+    margin: 0 auto;
     -webkit-animation-name: next;
             animation-name: next;
     -webkit-animation-timing-function: ease;
@@ -390,9 +392,9 @@ section {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
   .flex-projects p, .flex-projects figure {
     -webkit-flex: 1 1 300px;
         -ms-flex: 1 1 300px;
@@ -401,11 +403,13 @@ section {
 
 figure {
   max-width: 300px;
-  display: inline-block; }
-
-img {
-  display: block;
-  margin: 0 auto; }
+  display: inline-block;
+  border: 1px solid #8b8b8b; }
+  figure img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px; }
 
 figure h3 {
   text-align: right; }
@@ -422,3 +426,27 @@ figure h3 {
 
 .section:nth-child(3) h1 {
   font-size: 1.7rem; }
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 0.6rem;
+  margin: 5px;
+  border-radius: 4px;
+  max-width: 120px; }
+
+.btn-demo {
+  background-color: #333634;
+  color: #fff;
+  border: 1px solid transparent; }
+  .btn-demo:hover {
+    background-color: #fff;
+    color: #010101;
+    border-color: #8b8b8b; }
+
+.btn-code {
+  background-color: #fff;
+  border: 1px solid #8b8b8b; }
+  .btn-code:hover {
+    color: #8b8b8b;
+    border: 1px solid #8b8b8b; }

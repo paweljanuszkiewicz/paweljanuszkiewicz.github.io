@@ -31,6 +31,8 @@ $arrowOpacity: .4
   margin-right: auto
   cursor: pointer
   & > img
+    display: block
+    margin: 0 auto
     animation-name: next
     animation-timing-function: ease
     animation-duration: 2s
@@ -256,7 +258,7 @@ section
   display: flex
   flex-wrap: wrap
   justify-content: center
-  align-items: flex-start
+  align-items: stretch
   p, figure
     flex: 1 1 300px
     margin: 20px
@@ -264,10 +266,13 @@ section
 figure
   max-width: 300px
   display: inline-block
-
-img
-  display: block
-  margin: 0 auto
+  border: 1px solid $grey
+  // +mark
+  img
+    max-width: 300px
+    display: block
+    margin: 0 auto
+    padding: 20px
 
 figure h3
   text-align: right
@@ -287,3 +292,27 @@ figure h3
 .section:nth-child(3)
   h1
     font-size: 1.7rem
+
+.btn
+  display: inline-block
+  padding: 14px 24px
+  font-size: .6rem
+  margin: 5px
+  border-radius: 4px
+  max-width: 120px
+
+.btn-demo
+  background-color: $lightblack
+  color: $white
+  border: 1px solid transparent
+  &:hover
+    background-color: $white
+    color: $black
+    border-color: $grey
+
+.btn-code
+  background-color: $white
+  border: 1px solid $grey
+  &:hover
+    color: $grey
+    border: 1px solid $grey
