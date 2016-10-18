@@ -2,9 +2,9 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
       verticalCentered: true,
-      responsiveWidth: 600,
+      responsiveWidth: 1200,
       // height to content
-      responsiveHeight: 1200,
+      // responsiveHeight: 1200,
 			fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index){

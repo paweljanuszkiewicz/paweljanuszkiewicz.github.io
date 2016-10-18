@@ -16,9 +16,13 @@ body
   margin: 0 auto
   max-width: 1920px
 
-.container-1024
+.container-1020
   margin: 0 auto
-  max-width: 1024px
+  max-width: 1020px
+
+.container-1260
+  margin: 0 auto
+  max-width: 1240px
 
 $arrowOpacity: .4
 .arrow
@@ -193,14 +197,18 @@ section
     margin: 0 20px
     padding: 50px 0
 
+@media (min-width: $mobileMenu)
+  section
+    h1
+      padding-top: 0
+
   h2, h3
     color: $lightblack
 
   h2
-    font-size: 1.2rem
-    padding: 30px 0 15px 0
-    margin-bottom: 15px
-    +caps
+    font-size: 1rem
+    padding: 30px 0 16px 0
+    // +caps
 
   h3
     font-size: .7rem
@@ -227,8 +235,7 @@ section
   li::before
     content: '- '
   p
-    margin: 0 20px
-    padding-bottom: 10px
+    margin: 10px 16px
   a
     white-space: nowrap
     color: $black
@@ -284,30 +291,32 @@ section[data-anchor='skills']
   flex-direction: column
   justify-content: flex-start
   align-items: stretch
-  // +mark2
-  figure
-    flex: 1 0 600px
-    margin: 20px
+  flex-wrap: nowrap
+  .box
+    flex: 1 1 200px
+    margin: 16px 10px
+    padding: 20px
 
-figure
-  // +mark
-  // border-top: 1px dashed $lightblack
-  padding-top: 40px
-  height: auto
-  img
-    max-width: 300px
-    display: block
-    margin: 0 auto 0 auto
-    margin-bottom: 12px
+.box
+  background-color: rgba($lightgrey, .16)
   h2
-    border-bottom: 1px solid $lightblack
+    border-bottom: 1px solid $lightgrey
   p
-    margin: 0
-    margin-top: 20px
-    margin-bottom: 20px
+    margin: 16px 0
+    margin-bottom: 35px
+
+.image
+  display: inline-block
+  border: 0
+  & > img
+    width: 100%
+    max-width: 500px
+    display: block
+
+.image > div
+  display: none
 
 .buttons
-  // +mark
   text-align: right
 
 .btn
@@ -317,7 +326,6 @@ figure
   border-radius: 4px
   max-width: 120px
   min-height: 48px
-  margin: 5px
 
 .btn-demo
   background-color: $lightblack
@@ -333,6 +341,7 @@ figure
   background-color: $white
   border: 1px solid $grey
   padding-left: 20px
+  margin-left: 5px
   &::before
     content: url('../images/mark-github.png')
     vertical-align: middle
@@ -340,3 +349,52 @@ figure
   &:hover
     color: $black
     border: 1px solid $grey
+
+@media (min-width: $medium)
+  .image
+    float: left
+    margin-right: 20px
+
+@media (min-width: $mobileMenu)
+  .flex-projects
+    flex-direction: row
+  .image
+    float: none
+    position: relative
+    overflow: hidden
+    margin: 0
+    & > img
+      transition: all 400ms ease
+    &:hover > div
+      transform: none
+      opacity: 1
+    &:hover > img
+      filter: blur(2px)
+
+    & > div
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: rgba($black, .6)
+      z-index: 1
+      color: $white
+      font-size: .7rem
+      display: flex
+      align-items: center
+      justify-content: center
+      transform: translateY(30%)
+      opacity: 0
+      transition: all 400ms ease
+
+  .box
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    justify-content: space-between
+    .image, h2, .buttons
+      flex: 0 0 auto
+    p
+      flex: 1 0 auto
