@@ -562,17 +562,25 @@ section[data-anchor='contact'] {
     right: 0;
     text-align: right;
     padding-bottom: 10px;
-    padding-right: 10px; }
+    padding-right: 20px; }
   section[data-anchor='contact'] p {
     display: inline-block;
-    color: #fff; }
+    font-size: 0.46rem;
+    color: #fff;
+    vertical-align: baseline; }
+  section[data-anchor='contact'] a {
+    font-size: 0.6rem; }
 
 @media (min-width: 500px) {
   section[data-anchor='contact'] h1 {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
+    font-size: 0.6rem; } }
 @media (min-width: 640px) {
   section[data-anchor='contact'] h1 {
-    font-size: 1.6rem; } }
+    font-size: 1.6rem; }
+  section[data-anchor='contact'] p {
+    font-size: 0.7rem; } }
 @media (min-width: 1200px) {
   section[data-anchor='contact'] h1 {
     font-size: 2.6rem; } }
