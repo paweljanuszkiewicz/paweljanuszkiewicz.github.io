@@ -322,6 +322,8 @@ section {
     text-align: right;
     margin: 0 20px;
     padding: 50px 0; }
+  section h2, section h3 {
+    color: #333634; }
   section h2 {
     font-size: 1.2rem;
     padding: 30px 0 15px 0;
@@ -333,8 +335,7 @@ section {
     margin-left: 20px;
     margin-right: 10px;
     padding-bottom: 20px;
-    padding-top: 20px;
-    color: #010101; }
+    padding-top: 20px; }
   section p, section li {
     line-height: 1.2rem;
     font-size: 0.7rem;
@@ -417,19 +418,19 @@ section[data-anchor='skills'] h3 {
             flex: 1 1 100px;
     margin: 20px; }
 
-figure img {
-  max-width: 300px;
-  display: block;
-  margin: 0 auto 0 0;
-  display: none; }
-figure h2 {
-  text-align: right;
-  border-bottom: 1px solid #333634;
-  color: #333634; }
-figure p {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+figure {
+  padding-top: 40px; }
+  figure img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 0 auto;
+    margin-bottom: 12px; }
+  figure h2 {
+    border-bottom: 1px solid #333634; }
+  figure p {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
 .buttons {
   text-align: right; }
@@ -438,14 +439,16 @@ figure p {
   display: inline-block;
   padding: 14px 24px;
   font-size: 0.6rem;
-  margin: 5px;
   border-radius: 4px;
-  max-width: 120px; }
+  max-width: 120px;
+  min-height: 48px;
+  margin: 5px; }
 
 .btn-demo {
   background-color: #333634;
   color: #fff;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  vertical-align: top; }
   .btn-demo:hover {
     background-color: #fff;
     color: #010101;
