@@ -553,6 +553,7 @@ section[data-anchor='contact'] {
   position: relative; }
   section[data-anchor='contact'] h1 {
     text-align: left;
+    font-size: 0.76rem;
     color: #fff; }
   section[data-anchor='contact'] footer {
     position: absolute;
@@ -565,3 +566,13 @@ section[data-anchor='contact'] {
   section[data-anchor='contact'] p {
     display: inline-block;
     color: #fff; }
+
+@media (min-width: 500px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 1.2rem; } }
+@media (min-width: 640px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 1.6rem; } }
+@media (min-width: 1200px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 2.6rem; } }

@@ -402,6 +402,7 @@ section[data-anchor='contact']
   position: relative
   h1
     text-align: left
+    font-size: .76rem
     color: $white
   footer
     position: absolute
@@ -414,3 +415,16 @@ section[data-anchor='contact']
   p
     display: inline-block
     color: $white
+
+@media (min-width: 500px)
+  section[data-anchor='contact']
+    h1
+      font-size: 1.2rem
+@media (min-width: $medium)
+  section[data-anchor='contact']
+    h1
+      font-size: 1.6rem
+@media (min-width: $mobileMenu)
+  section[data-anchor='contact']
+    h1
+      font-size: 2.6rem
