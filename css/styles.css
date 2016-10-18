@@ -194,12 +194,12 @@ nav {
   nav.active {
     max-height: 800px;
     border-left-color: #CFCFCF; }
-  nav.active li:first-child {
-    padding-top: 8px; }
   nav ul {
     width: 100%; }
   nav li {
     text-align: center; }
+  nav li:first-child {
+    padding-top: 8px; }
   nav a {
     color: #010101;
     display: inline-block;
