@@ -314,13 +314,10 @@ section.min {
 section {
   display: block;
   min-height: 100vh;
-  height: auto !important;
-  border-bottom: 1px solid #CFCFCF; }
+  height: auto !important; }
   section h1 {
     font-size: 2.4rem;
     color: #010101;
-    padding-top: 0px;
-    padding-bottom: 20px;
     text-align: right;
     margin: 0 20px;
     padding: 50px 0; }
@@ -350,8 +347,6 @@ section {
   section p {
     margin: 0 20px;
     padding-bottom: 10px; }
-  section p:last-child {
-    padding-bottom: 50px; }
   section a {
     white-space: nowrap;
     color: #010101;
@@ -382,6 +377,13 @@ section {
   .lang {
     right: auto;
     left: 20px; } }
+section[data-anchor='start'] h1, section[data-anchor='start'] p {
+  padding: 0;
+  text-align: center;
+  margin: 0 auto; }
+section[data-anchor='start'] h1 {
+  padding-bottom: 10px; }
+
 .flex-projects {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -414,17 +416,7 @@ figure {
 figure h3 {
   text-align: right; }
 
-.section:first-child h1, .section:first-child p {
-  padding: 0;
-  text-align: center;
-  margin: 0 auto; }
-.section:first-child h1 {
-  margin-top: 100px;
-  padding-bottom: 10px; }
-.section:first-child p {
-  margin-bottom: 100px; }
-
-.section:nth-child(3) h1 {
+section[data-anchor='skills'] h1 {
   font-size: 1.7rem; }
 
 .btn {
@@ -446,7 +438,12 @@ figure h3 {
 
 .btn-code {
   background-color: #fff;
-  border: 1px solid #8b8b8b; }
+  border: 1px solid #8b8b8b;
+  padding-left: 20px; }
+  .btn-code::before {
+    content: url("../images/mark-github.png");
+    vertical-align: middle;
+    padding-right: 4px; }
   .btn-code:hover {
     color: #8b8b8b;
     border: 1px solid #8b8b8b; }
