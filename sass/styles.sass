@@ -197,18 +197,12 @@ section
     margin: 0 20px
     padding: 50px 0
 
-@media (min-width: $mobileMenu)
-  section
-    h1
-      padding-top: 0
-
   h2, h3
     color: $lightblack
 
   h2
     font-size: 1rem
     padding: 30px 0 16px 0
-    // +caps
 
   h3
     font-size: .7rem
@@ -247,6 +241,11 @@ section
     border-color: transparent
     color: $grey
 
+@media (min-width: $mobileMenu)
+  section
+    h1
+      padding-top: 0
+      
 strong
   border-bottom: 1px dashed $grey
 

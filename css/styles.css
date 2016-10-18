@@ -326,58 +326,48 @@ section {
     text-align: right;
     margin: 0 20px;
     padding: 50px 0; }
-
-@media (min-width: 1200px) {
-  section h1 {
-    padding-top: 0; }
-
-  h2, h3 {
+  section h2, section h3 {
     color: #333634; }
-
-  h2 {
+  section h2 {
     font-size: 1rem;
     padding: 30px 0 16px 0; }
-
-  h3 {
+  section h3 {
     font-size: 0.7rem;
     font-weight: bold;
     margin-left: 20px;
     margin-right: 10px;
     padding-bottom: 20px;
     padding-top: 20px; }
-
-  p, li {
+  section p, section li {
     line-height: 1.2rem;
     font-size: 0.7rem;
     text-align: left;
     color: #8b8b8b;
     max-width: 800px; }
-
-  ul {
+  section ul {
     margin-left: 24px;
     margin-right: 10px; }
-
-  li {
+  section li {
     padding-bottom: 2px;
     padding-left: 14px;
     text-indent: -12px; }
-
-  li::before {
+  section li::before {
     content: "- "; }
-
-  p {
+  section p {
     margin: 10px 16px; }
-
-  a {
+  section a {
     white-space: nowrap;
     color: #010101;
     text-decoration: none;
     border-bottom: 1px solid #010101;
     transition: all 400ms ease; }
-
-  a:hover {
+  section a:hover {
     border-color: transparent;
-    color: #8b8b8b; } }
+    color: #8b8b8b; }
+
+@media (min-width: 1200px) {
+  section h1 {
+    padding-top: 0; } }
 strong {
   border-bottom: 1px dashed #8b8b8b; }
 
