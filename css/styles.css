@@ -355,9 +355,9 @@ section {
     margin: 10px 16px; }
   section a {
     white-space: nowrap;
-    color: #010101;
+    color: #333634;
     text-decoration: none;
-    border-bottom: 1px solid #010101;
+    border-bottom: 1px solid #333634;
     transition: all 200ms ease; }
   section a:hover {
     border-color: transparent;
@@ -438,7 +438,9 @@ section[data-anchor='skills'] h3 {
   .image > img {
     width: 100%;
     max-width: 500px;
-    display: block; }
+    display: block;
+    -webkit-filter: grayscale(0.4);
+            filter: grayscale(0.4); }
 
 .image > div {
   display: none; }
@@ -569,7 +571,7 @@ section[data-anchor='contact'] {
     font-size: 0.46rem;
     color: #fff;
     vertical-align: baseline; }
-  section[data-anchor='contact'] a {
+  section[data-anchor='contact'] .mail {
     font-size: 0.6rem; }
 
 @media (min-width: 500px) {

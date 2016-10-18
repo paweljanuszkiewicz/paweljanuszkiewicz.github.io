@@ -231,9 +231,9 @@ section
     margin: 10px 16px
   a
     white-space: nowrap
-    color: $black
+    color: $lightblack
     text-decoration: none
-    border-bottom: 1px solid $black
+    border-bottom: 1px solid $lightblack
     transition: all 200ms ease
 
   a:hover
@@ -310,6 +310,7 @@ section[data-anchor='skills']
     width: 100%
     max-width: 500px
     display: block
+    filter: grayscale(.4)
 
 .image > div
   display: none
@@ -418,7 +419,7 @@ section[data-anchor='contact']
     font-size: .46rem
     color: $white
     vertical-align: baseline
-  a
+  .mail
     font-size: .6rem
 
 @media (min-width: 500px)
