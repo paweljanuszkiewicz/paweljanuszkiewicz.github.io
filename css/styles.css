@@ -192,9 +192,10 @@ nav {
   border-left-color: transparent;
   transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out; }
   nav.active {
-    padding-top: 8px;
     max-height: 800px;
     border-left-color: #CFCFCF; }
+  nav.active li:first-child {
+    padding-top: 8px; }
   nav ul {
     width: 100%; }
   nav li {

@@ -79,9 +79,10 @@ nav
   border-left-color: transparent
   transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out
   &.active
-    padding-top: 8px
     max-height: 800px
     border-left-color: $lightgrey
+  &.active li:first-child
+    padding-top: 8px
   ul
     width: 100%
   li
