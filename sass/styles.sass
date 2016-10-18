@@ -185,13 +185,19 @@ section
   min-height: 100vh
   height: auto !important   //fullPage.js mod
   // border-bottom: 1px solid $lightgrey
-  // padding-bottom: 100px
+  padding-bottom: 30px
   h1
     font-size: 2.4rem
     color: $black
     text-align: right
     margin: 0 20px
     padding: 50px 0
+
+  h2
+    font-size: 1.2rem
+    padding: 30px 0 15px 0
+    margin-bottom: 15px
+    +caps
 
   h3
     font-size: .7rem
@@ -210,7 +216,7 @@ section
     max-width: 800px
 
   ul
-    margin-left: 10px
+    margin-left: 24px
     margin-right: 10px
   li
     padding-bottom: 2px
@@ -231,6 +237,9 @@ section
   a:hover
     border-color: transparent
     color: $grey
+
+strong
+  border-bottom: 1px dashed $grey
 
 //  start
 .lang
@@ -260,32 +269,43 @@ section[data-anchor='start']
   h1
     padding-bottom: 10px
 
-.flex-projects
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  align-items: stretch
-  p, figure
-    flex: 1 1 300px
-    margin: 20px
-
-figure
-  max-width: 300px
-  display: inline-block
-  border: 1px solid $grey
-  img
-    max-width: 300px
-    display: block
-    margin: 0 auto
-    padding: 20px
-
-figure h3
-  text-align: right
-
 //  skills
 section[data-anchor='skills']
   h1
     font-size: 1.7rem
+  h3
+    margin-top: 24px
+
+//  projects
+.flex-projects
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: stretch
+  // +mark2
+  figure
+    flex: 1 1 100px
+    margin: 20px
+
+figure
+  // +mark
+  img
+    max-width: 300px
+    display: block
+    margin: 0 auto 0 0
+    display: none
+  h2
+    text-align: right
+    border-bottom: 1px solid $lightblack
+    color: $lightblack
+  p
+    margin: 0
+    margin-top: 20px
+    margin-bottom: 20px
+
+.buttons
+  // +mark
+  text-align: right
 
 .btn
   display: inline-block
@@ -313,5 +333,5 @@ section[data-anchor='skills']
     vertical-align: middle
     padding-right: 4px
   &:hover
-    color: $grey
+    color: $black
     border: 1px solid $grey

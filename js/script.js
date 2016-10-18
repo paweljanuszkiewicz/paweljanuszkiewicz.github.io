@@ -3,6 +3,8 @@ $(document).ready(function() {
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
       verticalCentered: true,
       responsiveWidth: 600,
+      // height to content
+      responsiveHeight: 1200,
 			fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index){

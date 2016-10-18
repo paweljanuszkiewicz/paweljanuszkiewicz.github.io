@@ -314,13 +314,19 @@ section.min {
 section {
   display: block;
   min-height: 100vh;
-  height: auto !important; }
+  height: auto !important;
+  padding-bottom: 30px; }
   section h1 {
     font-size: 2.4rem;
     color: #010101;
     text-align: right;
     margin: 0 20px;
     padding: 50px 0; }
+  section h2 {
+    font-size: 1.2rem;
+    padding: 30px 0 15px 0;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
   section h3 {
     font-size: 0.7rem;
     font-weight: bold;
@@ -336,7 +342,7 @@ section {
     color: #8b8b8b;
     max-width: 800px; }
   section ul {
-    margin-left: 10px;
+    margin-left: 24px;
     margin-right: 10px; }
   section li {
     padding-bottom: 2px;
@@ -356,6 +362,9 @@ section {
   section a:hover {
     border-color: transparent;
     color: #8b8b8b; }
+
+strong {
+  border-bottom: 1px dashed #8b8b8b; }
 
 .lang {
   color: #8b8b8b;
@@ -384,40 +393,46 @@ section[data-anchor='start'] h1, section[data-anchor='start'] p {
 section[data-anchor='start'] h1 {
   padding-bottom: 10px; }
 
+section[data-anchor='skills'] h1 {
+  font-size: 1.7rem; }
+section[data-anchor='skills'] h3 {
+  margin-top: 24px; }
+
 .flex-projects {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
-  .flex-projects p, .flex-projects figure {
-    -webkit-flex: 1 1 300px;
-        -ms-flex: 1 1 300px;
-            flex: 1 1 300px;
+  .flex-projects figure {
+    -webkit-flex: 1 1 100px;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
     margin: 20px; }
 
-figure {
+figure img {
   max-width: 300px;
-  display: inline-block;
-  border: 1px solid #8b8b8b; }
-  figure img {
-    max-width: 300px;
-    display: block;
-    margin: 0 auto;
-    padding: 20px; }
+  display: block;
+  margin: 0 auto 0 0;
+  display: none; }
+figure h2 {
+  text-align: right;
+  border-bottom: 1px solid #333634;
+  color: #333634; }
+figure p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
-figure h3 {
+.buttons {
   text-align: right; }
-
-section[data-anchor='skills'] h1 {
-  font-size: 1.7rem; }
 
 .btn {
   display: inline-block;
@@ -445,5 +460,5 @@ section[data-anchor='skills'] h1 {
     vertical-align: middle;
     padding-right: 4px; }
   .btn-code:hover {
-    color: #8b8b8b;
+    color: #010101;
     border: 1px solid #8b8b8b; }
