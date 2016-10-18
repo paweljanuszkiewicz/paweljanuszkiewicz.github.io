@@ -98,10 +98,6 @@ body {
   margin: 0 auto;
   max-width: 1920px; }
 
-.container-1020 {
-  margin: 0 auto;
-  max-width: 1020px; }
-
 .container-1260 {
   margin: 0 auto;
   max-width: 1240px; }
@@ -188,7 +184,6 @@ nav {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding-top: 8px;
   background-color: rgba(255, 255, 255, 0.9);
   max-height: 0;
   overflow: hidden;
@@ -197,6 +192,7 @@ nav {
   border-left-color: transparent;
   transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out; }
   nav.active {
+    padding-top: 8px;
     max-height: 800px;
     border-left-color: #CFCFCF; }
   nav ul {
@@ -217,10 +213,12 @@ nav {
       background-color: rgba(207, 207, 207, 0.5); }
 
 @media (min-width: 1200px) {
+  #fullpage {
+    margin-right: 75px; }
+
   aside {
     bottom: 0;
     left: auto;
-    background-color: #fff;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -318,8 +316,7 @@ section.min {
 section {
   display: block;
   min-height: 100vh;
-  height: auto !important;
-  padding-bottom: 30px; }
+  height: auto !important; }
   section h1 {
     font-size: 2.4rem;
     color: #010101;
@@ -360,7 +357,7 @@ section {
     color: #010101;
     text-decoration: none;
     border-bottom: 1px solid #010101;
-    transition: all 400ms ease; }
+    transition: all 200ms ease; }
   section a:hover {
     border-color: transparent;
     color: #8b8b8b; }
@@ -551,3 +548,20 @@ section[data-anchor='skills'] h3 {
       -webkit-flex: 1 0 auto;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; } }
+section[data-anchor='contact'] {
+  background-color: #333634;
+  position: relative; }
+  section[data-anchor='contact'] h1 {
+    text-align: left;
+    color: #fff; }
+  section[data-anchor='contact'] footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding-bottom: 10px;
+    padding-right: 10px; }
+  section[data-anchor='contact'] p {
+    display: inline-block;
+    color: #fff; }
