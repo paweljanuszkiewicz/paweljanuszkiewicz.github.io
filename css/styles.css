@@ -232,7 +232,6 @@ nav {
         position: absolute;
         left: 0;
         bottom: -4px;
-        z-index: 0;
         transition: width 400ms ease; }
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
