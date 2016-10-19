@@ -240,7 +240,7 @@ nav {
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
 html {
-  font-size: 26px;
+  font-size: 24px;
   color: #010101;
   font-family: serif; }
 
@@ -360,8 +360,18 @@ section {
     color: #8b8b8b; }
 
 @media (min-width: 1200px) {
-  section h1 {
-    padding-top: 0; } }
+  section {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    section h1 {
+      padding-top: 0; } }
 strong {
   border-bottom: 1px dashed #8b8b8b; }
 

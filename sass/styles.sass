@@ -109,6 +109,9 @@ section
 
 @media (min-width: $mobileMenu)
   section
+    display: flex
+    justify-content: center
+    align-items: center
     h1
       padding-top: 0
 
@@ -268,6 +271,7 @@ section[data-anchor='skills']
 
 //  contact
 //font-size in px for chrome mobile (unpredictible rem working)
+//the issue is related with font boosting
 section[data-anchor='contact']
   background-color: $lightblack
   position: relative
