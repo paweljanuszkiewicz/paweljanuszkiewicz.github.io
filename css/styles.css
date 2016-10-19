@@ -1,68 +1,640 @@
-/*
-Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 4 spaces.
-        on line 35 of sass/_reset.sass
-        from line 3 of sass/styles.sass
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, textarea, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
-30: footer, header, hgroup, menu, nav, section
-31:     display: block
-32: 
-33: //font boosting chrome mobile 
-34: html *
-35:   max-height: 10000000px
-36: 
-37: body
-38:     line-height: 1
-39: 
-40: ol, ul
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-Backtrace:
-sass/_reset.sass:35
-sass/styles.sass:3
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:486:in `block in tabulate'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `each_with_index'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:444:in `tabulate'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-C:/Ruby23-x64/bin/sass:23:in `load'
-C:/Ruby23-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 4 spaces.\A         on line 35 of sass/_reset.sass\A         from line 3 of sass/styles.sass\A \A 30: footer, header, hgroup, menu, nav, section\A 31:     display: block\A 32: \A 33: //font boosting chrome mobile \A 34: html *\A 35:   max-height: 10000000px\A 36: \A 37: body\A 38:     line-height: 1\A 39: \A 40: ol, ul"; }
+html * {
+  max-height: 10000000px; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea {
+  resize: none; }
+
+.hamburger {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  z-index: 1;
+  cursor: pointer;
+  position: relative; }
+
+.hamburger div {
+  top: 48%; }
+
+.hamburger div, .hamburger div::before, .hamburger div::after {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #8b8b8b;
+  transition: all 400ms ease-in-out; }
+
+.hamburger div:before, .hamburger div:after {
+  content: ""; }
+
+.hamburger div:before {
+  top: -12px; }
+
+.hamburger div:after {
+  bottom: -12px; }
+
+.hamburger.active div {
+  background-color: transparent; }
+.hamburger.active div:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+.hamburger.active div:after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.icon {
+  background-color: transparent;
+  background-color: #fff; }
+
+nav {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  max-height: 0;
+  overflow: hidden;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: transparent;
+  transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out; }
+  nav.active {
+    max-height: 800px;
+    border-left-color: #CFCFCF; }
+  nav ul {
+    width: 100%; }
+  nav li {
+    text-align: center; }
+  nav a {
+    color: #010101;
+    display: inline-block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase; }
+    nav a:active {
+      background-color: rgba(207, 207, 207, 0.5); }
+
+@media (min-width: 1200px) {
+  #fullpage {
+    margin-right: 54px; }
+
+  aside {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border-right: 1px solid #CFCFCF; }
+
+  .icon, nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+  .icon {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-left: 1px solid #CFCFCF; }
+
+  nav {
+    max-width: 0;
+    max-height: none;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    transition: max-width 500ms linear, border-color 400ms ease;
+    border: none;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: transparent; }
+    nav.active {
+      max-height: none;
+      max-width: 400px;
+      border-left-color: #CFCFCF; }
+    nav ul {
+      margin-left: 50px;
+      margin-right: 140px;
+      width: auto; }
+    nav li {
+      padding-bottom: 20px;
+      text-align: left;
+      white-space: nowrap;
+      -webkit-transform: translateX(40px);
+          -ms-transform: translateX(40px);
+              transform: translateX(40px);
+      opacity: 0;
+      font-weight: bold;
+      transition: opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98), -webkit-transform 300ms ease;
+      transition: transform 300ms ease, opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98);
+      transition: transform 300ms ease, opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98), -webkit-transform 300ms ease; }
+      nav li::before {
+        content: "# "; }
+      nav li:last-child {
+        padding-bottom: 0; }
+      nav li.show {
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        opacity: 1; }
+    nav li:first-child > a {
+      padding-top: 0; }
+    nav li:last-child {
+      padding-bottom: 0; }
+    nav a {
+      padding: 0;
+      padding-top: 20px;
+      text-transform: none;
+      font-size: 1rem;
+      font-weight: bold;
+      position: relative;
+      width: auto; }
+      nav a:active {
+        background-color: #fff; }
+      nav a::after {
+        content: "";
+        background-color: #010101;
+        width: 0;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        z-index: 0;
+        transition: width 400ms ease; }
+      nav a:hover::after, nav a.active::after {
+        width: 100%; } }
+html {
+  font-size: 26px;
+  color: #010101;
+  font-family: serif; }
+
+body {
+  background-color: #fff; }
+
+.container-1920 {
+  margin: 0 auto;
+  max-width: 1920px; }
+
+.container-1260 {
+  margin: 0 auto;
+  max-width: 1240px; }
+
+.arrow {
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; }
+  .arrow > img {
+    display: block;
+    margin: 0 auto;
+    -webkit-animation-name: next;
+            animation-name: next;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: none;
+            animation-fill-mode: none;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+
+@-webkit-keyframes next {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+  20% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0.08; }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; } }
+
+@keyframes next {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+  20% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0.08; }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; } }
+section {
+  display: block;
+  min-height: 100vh; }
+  section h1 {
+    font-size: 2.4rem;
+    color: #010101;
+    text-align: right;
+    margin: 0 20px;
+    padding: 50px 0; }
+  section h2, section h3 {
+    color: #333634; }
+  section h2 {
+    font-size: 1rem;
+    padding: 30px 0 16px 0; }
+  section h3 {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+  section p, section li {
+    line-height: 1.2rem;
+    font-size: 0.7rem;
+    text-align: left;
+    color: #8b8b8b;
+    max-width: 800px; }
+  section ul {
+    margin-left: 24px;
+    margin-right: 10px; }
+  section li {
+    padding-bottom: 2px;
+    padding-left: 14px;
+    text-indent: -12px; }
+  section li::before {
+    content: "- "; }
+  section p {
+    margin: 10px 16px; }
+  section a {
+    white-space: nowrap;
+    color: #333634;
+    text-decoration: none;
+    border-bottom: 1px solid #333634;
+    transition: all 200ms ease; }
+  section a:hover {
+    border-color: transparent;
+    color: #8b8b8b; }
+
+@media (min-width: 1200px) {
+  section h1 {
+    padding-top: 0; } }
+strong {
+  border-bottom: 1px dashed #8b8b8b; }
+
+.lang {
+  color: #8b8b8b;
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  top: 18px;
+  right: 16px;
+  text-transform: uppercase; }
+
+.en, .pl {
+  cursor: pointer;
+  transition: color 400ms ease; }
+
+.en:hover, .pl:hover {
+  color: #010101; }
+
+@media (min-width: 1200px) {
+  .lang {
+    right: auto;
+    left: 20px; } }
+section[data-anchor='start'] h1, section[data-anchor='start'] p {
+  padding: 0;
+  text-align: center;
+  margin: 0 auto; }
+section[data-anchor='start'] h1 {
+  padding-bottom: 10px; }
+
+section[data-anchor='skills'] h1 {
+  font-size: 1.7rem; }
+section[data-anchor='skills'] h3 {
+  margin-top: 24px; }
+
+.flex-projects {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+  .flex-projects .box {
+    -webkit-flex: 1 1 200px;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    margin: 16px 10px;
+    padding: 20px; }
+
+.box h2 {
+  border-bottom: 1px solid #CFCFCF; }
+.box p {
+  margin: 16px 0;
+  margin-bottom: 35px; }
+
+.image {
+  display: inline-block;
+  border: 0; }
+  .image > img {
+    width: 100%;
+    max-width: 500px;
+    display: block; }
+
+.image > div {
+  display: none; }
+
+.buttons {
+  text-align: right; }
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 0.6rem;
+  border-radius: 4px;
+  max-width: 120px;
+  min-height: 48px; }
+
+.btn-demo {
+  background-color: #333634;
+  color: #fff;
+  border: 1px solid transparent;
+  vertical-align: top; }
+  .btn-demo:hover {
+    background-color: #fff;
+    color: #010101;
+    border-color: #8b8b8b; }
+
+.btn-code {
+  background-color: #fff;
+  border: 1px solid #8b8b8b;
+  padding-left: 20px;
+  margin-left: 5px; }
+  .btn-code::before {
+    content: url("../images/mark-github.png");
+    vertical-align: middle;
+    padding-right: 4px; }
+  .btn-code:hover {
+    color: #010101;
+    border: 1px solid #8b8b8b; }
+
+@media (min-width: 640px) {
+  .image {
+    float: left;
+    margin-right: 20px; }
+    .image > img {
+      max-width: 300px; } }
+@media (min-width: 1200px) {
+  .flex-projects {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+
+  .image {
+    float: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0; }
+    .image > img {
+      max-width: 500px;
+      transition: all 400ms ease; }
+    .image:hover > div {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      opacity: 1; }
+    .image:hover > img {
+      -webkit-filter: blur(2px);
+              filter: blur(2px); }
+    .image > div {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(1, 1, 1, 0.6);
+      z-index: 1;
+      color: #fff;
+      font-size: 0.7rem;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-transform: translateY(30%);
+          -ms-transform: translateY(30%);
+              transform: translateY(30%);
+      opacity: 0;
+      transition: all 400ms ease; }
+
+  .box {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .box .image, .box h2, .box .buttons {
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+    .box p {
+      -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; } }
+section[data-anchor='contact'] {
+  background-color: #333634;
+  position: relative; }
+  section[data-anchor='contact'] h1 {
+    text-align: left;
+    font-size: 18px;
+    color: #fff; }
+  section[data-anchor='contact'] footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding-bottom: 10px;
+    padding-right: 20px; }
+  section[data-anchor='contact'] p {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    vertical-align: baseline; }
+  section[data-anchor='contact'] .mail {
+    font-size: 16px; }
+  section[data-anchor='contact'] .hover-section {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  section[data-anchor='contact'] .copy-section {
+    position: absolute;
+    margin-left: 20px; }
+  section[data-anchor='contact'] #copy {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    outline: 0;
+    color: #010101;
+    border: 1px solid #8b8b8b;
+    background-color: #CFCFCF;
+    padding: 4px 12px;
+    font-size: 13px; }
+  section[data-anchor='contact'] .copy-section {
+    display: none;
+    vertical-align: middle; }
+  section[data-anchor='contact'] .copied {
+    position: absolute;
+    color: #CFCFCF;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 15px 16px;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+    font-size: 13px;
+    transition: all 400ms ease; }
+    section[data-anchor='contact'] .copied.show {
+      opacity: 1;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
+  section[data-anchor='contact'] #copy::before {
+    content: url("../images/copy.png");
+    vertical-align: -50%;
+    padding-right: 8px; }
+
+@media (min-width: 500px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 1.2rem; }
+  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
+    font-size: 0.6rem; } }
+@media (min-width: 640px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 1.6rem; }
+  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
+    font-size: 0.7rem; } }
+@media (min-width: 1200px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 2.6rem; }
+  section[data-anchor='contact'] .copy-section {
+    display: inline-block; }
+  section[data-anchor='contact'] .copy-section {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+            transform: translateY(-100px);
+    transition: all 400ms ease; }
+  section[data-anchor='contact'] .hover-section:hover > .copy-section {
+    opacity: 1;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; } }
