@@ -1,24 +1,32 @@
 $(document).ready(function() {
-  $('#fullpage').fullpage({
+  console.log($(window).width());
+  if ($(window).width() > 1200) {
+    $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
-      verticalCentered: true,
-      responsiveWidth: 1200,
-      // height to content
-      // scrollOverflow: false,
-      // responsiveHeight: 1200,
-      autoScrolling: false,
-			fitToSection: false,
+      verticalCentered: false,
+      fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index){
         var $activeItem;
         $activeItem = $('nav').find('a[href="#' + anchor + '"]');
         $activeItem
-            .addClass('active')
-            .parent()
-            .siblings()
-            .children().removeClass('active');
-    }
-  });
+          .addClass('active')
+          .parent()
+          .siblings()
+          .children().removeClass('active');
+      }
+    });
+  }
+  else {
+    $('nav a').on('click', function ( e ) {
+      var to = $(this).attr('href');
+      to = to.substring(1, to.length);
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $('section[data-anchor="' + to + '"]').position().top
+      }, 1000);
+    });
+  }
   $('.arrow').on('click', function () {
     $.fn.fullpage.moveSectionDown();
   });
