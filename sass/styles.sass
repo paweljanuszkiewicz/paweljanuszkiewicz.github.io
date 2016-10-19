@@ -2,6 +2,7 @@
 @import 'mixins'
 @import 'reset'
 @import 'hamburger'
+@import 'navigation'
 
 // GLOBAL (mobile and desktop)
 html
@@ -20,7 +21,7 @@ body
   margin: 0 auto
   max-width: 1240px
 
-//arow
+//arrow
 $arrowOpacity: .4
 .arrow
   position: absolute
@@ -54,155 +55,24 @@ $arrowOpacity: .4
     transform: translateY(0)
     opacity: $arrowOpacity
 
-// NAVIGATION
-aside
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  z-index: 1
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
-  flex-direction: row-reverse
-
-.icon
-  background-color: $white
-
-nav
-  flex: 1 0 auto
-  background-color: rgba($white, .9)
-  max-height: 0
-  overflow: hidden
-  border-left-width: 1px
-  border-left-style: solid
-  border-left-color: transparent
-  transition: max-height 500ms ease-in-out, border-color 400ms ease-in-out
-  &.active
-    max-height: 800px
-    border-left-color: $lightgrey
-  ul
-    width: 100%
-  li
-    text-align: center
-  li:first-child
-    padding-top: 8px
-  a
-    color: $black
-    display: inline-block
-    padding-top: 22px
-    padding-bottom: 22px
-    padding-left: 22px
-    width: 100%
-    text-decoration: none
-    font-size: .7rem
-    +caps
-    &:active
-      background-color: rgba($lightgrey, .5)
-
-@media (min-width: $mobileMenu)
-  #fullpage
-    margin-right: 75px
-  aside
-    bottom: 0
-    left: auto
-    flex-direction: row
-    justify-content: center
-    align-items: stretch
-    border-right: 1px solid $lightgrey
-
-  .icon, nav
-    display: flex
-
-  .icon
-    justify-content: center
-    align-items: center
-    border-left: 1px solid $lightgrey
-
-  nav
-    max-width: 0
-    max-height: none
-    align-items: center
-    transition: max-width 500ms linear, border-color 400ms ease
-    border: none
-    border-left-width: 1px
-    border-left-style: solid
-    border-left-color: transparent
-    &.active
-      max-height: none
-      max-width: 400px
-      border-left-color: $lightgrey
-    ul
-      margin-left: 50px
-      margin-right: 140px
-      width: auto
-    li
-      padding-bottom: 20px
-      text-align: left
-      white-space: nowrap
-      transform: translateX(40px)
-      opacity: 0
-      font-weight: bold
-      transition: transform 300ms ease, opacity 300ms cubic-bezier(0.795, 0.190, 0.730, 0.980)
-      &::before
-        content: '# '
-      &:last-child
-        padding-bottom: 0
-      &.show
-        transform: none
-        opacity: 1
-    li:first-child > a
-      padding-top: 0
-    li:last-child
-      padding-bottom: 0
-    a
-      padding: 0
-      padding-top: 20px
-      text-transform: none
-      font-size: 1rem
-      font-weight: bold
-      position: relative
-      width: auto
-      &:active
-        background-color: $white
-      &::after
-        content: ''
-        background-color: $black
-        width: 0
-        height: 3px
-        position: absolute
-        left: 0
-        bottom: -4px
-        z-index: 0
-        transition: width 400ms ease
-      &:hover::after, &.active::after
-        width: 100%
-
 // SECTIONS
 //  all
-section.min
-  min-height: 0
-
 section
   display: block
   min-height: 100vh
   // fullPage.js mod
   height: auto !important
-  // padding-bottom: 30px
   h1
     font-size: 2.4rem
     color: $black
     text-align: right
     margin: 0 20px
     padding: 50px 0
-
   h2, h3
     color: $lightblack
-
   h2
     font-size: 1rem
     padding: 30px 0 16px 0
-
   h3
     font-size: .7rem
     font-weight: bold
@@ -210,14 +80,12 @@ section
     margin-right: 10px
     padding-bottom: 20px
     padding-top: 20px
-
   p, li
     line-height: 1.2rem
     font-size: .7rem
     text-align: left
     color: $grey
     max-width: 800px
-
   ul
     margin-left: 24px
     margin-right: 10px
@@ -235,7 +103,6 @@ section
     text-decoration: none
     border-bottom: 1px solid $lightblack
     transition: all 200ms ease
-
   a:hover
     border-color: transparent
     color: $grey
@@ -296,7 +163,6 @@ section[data-anchor='skills']
     padding: 20px
 
 .box
-  // background-color: rgba($lightgrey, .16)
   h2
     border-bottom: 1px solid $lightgrey
   p
@@ -469,7 +335,7 @@ section[data-anchor='contact']
   section[data-anchor='contact']
     h1
       font-size: 1.6rem
-    p
+    p, a.btn
       font-size: .7rem
 @media (min-width: $mobileMenu)
   section[data-anchor='contact']

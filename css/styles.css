@@ -86,78 +86,6 @@ textarea {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg); }
 
-html {
-  font-size: 26px;
-  color: #010101;
-  font-family: serif; }
-
-body {
-  background-color: #fff; }
-
-.container-1920 {
-  margin: 0 auto;
-  max-width: 1920px; }
-
-.container-1260 {
-  margin: 0 auto;
-  max-width: 1240px; }
-
-.arrow {
-  position: absolute;
-  height: 80px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer; }
-  .arrow > img {
-    display: block;
-    margin: 0 auto;
-    -webkit-animation-name: next;
-            animation-name: next;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-fill-mode: none;
-            animation-fill-mode: none;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.4; }
-
-@-webkit-keyframes next {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.4; }
-  20% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0.08; }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.4; } }
-
-@keyframes next {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.4; }
-  20% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0.08; }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.4; } }
 aside {
   position: fixed;
   top: 0;
@@ -311,9 +239,78 @@ nav {
         transition: width 400ms ease; }
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
-section.min {
-  min-height: 0; }
+html {
+  font-size: 26px;
+  color: #010101;
+  font-family: serif; }
 
+body {
+  background-color: #fff; }
+
+.container-1920 {
+  margin: 0 auto;
+  max-width: 1920px; }
+
+.container-1260 {
+  margin: 0 auto;
+  max-width: 1240px; }
+
+.arrow {
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; }
+  .arrow > img {
+    display: block;
+    margin: 0 auto;
+    -webkit-animation-name: next;
+            animation-name: next;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: none;
+            animation-fill-mode: none;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+
+@-webkit-keyframes next {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+  20% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0.08; }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; } }
+
+@keyframes next {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; }
+  20% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0.08; }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.4; } }
 section {
   display: block;
   min-height: 100vh;
@@ -620,7 +617,7 @@ section[data-anchor='contact'] {
 @media (min-width: 640px) {
   section[data-anchor='contact'] h1 {
     font-size: 1.6rem; }
-  section[data-anchor='contact'] p {
+  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
     font-size: 0.7rem; } }
 @media (min-width: 1200px) {
   section[data-anchor='contact'] h1 {
