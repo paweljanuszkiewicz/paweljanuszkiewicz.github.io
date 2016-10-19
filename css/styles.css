@@ -438,9 +438,7 @@ section[data-anchor='skills'] h3 {
   .image > img {
     width: 100%;
     max-width: 500px;
-    display: block;
-    -webkit-filter: grayscale(0.4);
-            filter: grayscale(0.4); }
+    display: block; }
 
 .image > div {
   display: none; }
