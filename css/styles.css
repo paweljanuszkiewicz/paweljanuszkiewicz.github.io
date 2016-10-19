@@ -88,7 +88,7 @@ textarea {
 
 aside {
   position: fixed;
-  top: 0;
+  top: inherit;
   left: 0;
   right: 0;
   z-index: 1;
