@@ -4,7 +4,7 @@ $(document).ready(function() {
       verticalCentered: true,
       responsiveWidth: 1200,
       // height to content
-      // responsiveHeight: 1200,
+      responsiveHeight: 1200,
 			fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index){
@@ -17,7 +17,6 @@ $(document).ready(function() {
             .children().removeClass('active');
     }
   });
-
   $('.arrow').on('click', function () {
     $.fn.fullpage.moveSectionDown();
   });

@@ -49,7 +49,7 @@ textarea {
   display: inline-block;
   width: 35px;
   height: 35px;
-  margin: 20px;
+  margin: 10px;
   z-index: 1;
   cursor: pointer;
   position: relative; }
@@ -106,6 +106,7 @@ aside {
           flex-direction: row-reverse; }
 
 .icon {
+  background-color: transparent;
   background-color: #fff; }
 
 nav {
@@ -126,8 +127,6 @@ nav {
     width: 100%; }
   nav li {
     text-align: center; }
-  nav li:first-child {
-    padding-top: 8px; }
   nav a {
     color: #010101;
     display: inline-block;
@@ -371,8 +370,8 @@ strong {
   position: absolute;
   font-family: sans-serif;
   font-size: 0.9rem;
-  top: 28px;
-  right: 20px;
+  top: 18px;
+  right: 16px;
   text-transform: uppercase; }
 
 .en, .pl {
@@ -570,9 +569,10 @@ section[data-anchor='contact'] {
   section[data-anchor='contact'] .mail {
     font-size: 0.6rem; }
   section[data-anchor='contact'] .hover-section {
-    padding-top: 40px;
-    padding-bottom: 40px; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
   section[data-anchor='contact'] .copy-section {
+    position: absolute;
     margin-left: 20px; }
   section[data-anchor='contact'] #copy {
     cursor: pointer;
