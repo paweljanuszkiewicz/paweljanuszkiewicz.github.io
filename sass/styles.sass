@@ -421,6 +421,41 @@ section[data-anchor='contact']
     vertical-align: baseline
   .mail
     font-size: .6rem
+  .hover-section
+    padding-top: 40px
+    padding-bottom: 40px
+  .copy-section
+    margin-left: 20px
+  #copy
+    cursor: pointer
+    position: relative
+    z-index: 2
+    outline: 0
+    color: $black
+    border: 1px solid $grey
+    background-color: $lightgrey
+    padding: 4px 12px
+    font-size: .5rem
+  .copy-section
+    display: none
+    vertical-align: middle
+  .copied
+    position: absolute
+    color: $lightgrey
+    background-color: rgba($black, .5)
+    padding: 15px 16px
+    transform: translateX(-100%)
+    opacity: 0
+    z-index: 1
+    font-size: .5rem
+    transition: all 400ms ease
+    &.show
+      opacity: 1
+      transform: none
+  #copy::before
+    content: url('../images/copy.png')
+    vertical-align: -50%
+    padding-right: 8px
 
 @media (min-width: 500px)
   section[data-anchor='contact']
@@ -438,3 +473,12 @@ section[data-anchor='contact']
   section[data-anchor='contact']
     h1
       font-size: 2.6rem
+    .copy-section
+      display: inline-block
+    .copy-section
+      opacity: 0
+      transform: translateY(-100px)
+      transition: all 400ms ease
+    .hover-section:hover > .copy-section
+      opacity: 1
+      transform: none
