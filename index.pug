@@ -7,6 +7,7 @@ html(lang='pl')
     link(rel='stylesheet', href='css/jquery.fullPage.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
     script(src='js/jquery.fullPage.min.js')
+    script(src='js/clipboard.min.js')
     script(src='js/script.js')
     link(rel='stylesheet', href='css/styles.css')
   body
@@ -148,7 +149,8 @@ html(lang='pl')
                 a(href='/utopicFlowersPsd').btn.btn-demo Demo
                 a(href='https://github.com/paweljanuszkiewicz/utopicFlowersPsd').btn.btn-code Code
       section.section(data-anchor='contact').min
-        a(href='mailto:pawel.januszkiewicz@outlook.com').mail: h1 pawel.januszkiewicz@outlook.com
+        a(href='mailto:pawel.januszkiewicz@outlook.com').mail: h1#mail pawel.januszkiewicz@outlook.com
+        button#copy(data-clipboard-action='copy', data-clipboard-target='#mail') Copy mail! 
         footer
           p  ... or see the website source here
           a(href='https://github.com/paweljanuszkiewicz/paweljanuszkiewicz.github.io').btn.btn-code Code
