@@ -1,22 +1,23 @@
 $(document).ready(function() {
-  $('#fullpage').fullpage({
-      anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
-      verticalCentered: true,
-      responsiveWidth: 1200,
-      // height to content
-      responsiveHeight: 1200,
-			fitToSection: false,
-      scrollingSpeed: 1000,
-      afterLoad: function(anchor, index){
-        var $activeItem;
-        $activeItem = $('nav').find('a[href="#' + anchor + '"]');
-        $activeItem
-            .addClass('active')
-            .parent()
-            .siblings()
-            .children().removeClass('active');
-    }
-  });
+  // $('#fullpage').fullpage({
+  //     anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
+  //     verticalCentered: true,
+  //     responsiveWidth: 1200,
+  //     // height to content
+  //     scrollOverflow: false,
+  //     responsiveHeight: 1200,
+	// 		fitToSection: false,
+  //     scrollingSpeed: 1000,
+  //     afterLoad: function(anchor, index){
+  //       var $activeItem;
+  //       $activeItem = $('nav').find('a[href="#' + anchor + '"]');
+  //       $activeItem
+  //           .addClass('active')
+  //           .parent()
+  //           .siblings()
+  //           .children().removeClass('active');
+  //   }
+  // });
   $('.arrow').on('click', function () {
     $.fn.fullpage.moveSectionDown();
   });
