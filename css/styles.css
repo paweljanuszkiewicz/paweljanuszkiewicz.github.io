@@ -609,7 +609,7 @@ section[data-anchor='contact'] {
     vertical-align: -50%;
     padding-right: 8px; }
 
-@media (min-width: 500px) {
+@media (min-width: 520px) {
   section[data-anchor='contact'] h1 {
     font-size: 1.2rem; }
   section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
