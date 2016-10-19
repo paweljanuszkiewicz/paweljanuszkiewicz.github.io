@@ -296,7 +296,7 @@ section[data-anchor='skills']
     padding: 20px
 
 .box
-  background-color: rgba($lightgrey, .16)
+  // background-color: rgba($lightgrey, .16)
   h2
     border-bottom: 1px solid $lightgrey
   p
@@ -352,6 +352,8 @@ section[data-anchor='skills']
   .image
     float: left
     margin-right: 20px
+    & > img
+      max-width: 300px
 
 @media (min-width: $mobileMenu)
   .flex-projects
@@ -362,6 +364,7 @@ section[data-anchor='skills']
     overflow: hidden
     margin: 0
     & > img
+      max-width: 500px
       transition: all 400ms ease
     &:hover > div
       transform: none

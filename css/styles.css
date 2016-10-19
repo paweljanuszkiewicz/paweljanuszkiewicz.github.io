@@ -424,13 +424,11 @@ section[data-anchor='skills'] h3 {
     margin: 16px 10px;
     padding: 20px; }
 
-.box {
-  background-color: rgba(207, 207, 207, 0.16); }
-  .box h2 {
-    border-bottom: 1px solid #CFCFCF; }
-  .box p {
-    margin: 16px 0;
-    margin-bottom: 35px; }
+.box h2 {
+  border-bottom: 1px solid #CFCFCF; }
+.box p {
+  margin: 16px 0;
+  margin-bottom: 35px; }
 
 .image {
   display: inline-block;
@@ -480,7 +478,9 @@ section[data-anchor='skills'] h3 {
 @media (min-width: 640px) {
   .image {
     float: left;
-    margin-right: 20px; } }
+    margin-right: 20px; }
+    .image > img {
+      max-width: 300px; } }
 @media (min-width: 1200px) {
   .flex-projects {
     -webkit-flex-direction: row;
@@ -493,6 +493,7 @@ section[data-anchor='skills'] h3 {
     overflow: hidden;
     margin: 0; }
     .image > img {
+      max-width: 500px;
       transition: all 400ms ease; }
     .image:hover > div {
       -webkit-transform: none;
