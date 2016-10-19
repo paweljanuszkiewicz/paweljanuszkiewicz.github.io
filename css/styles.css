@@ -91,6 +91,7 @@ aside {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -231,6 +232,7 @@ nav {
         position: absolute;
         left: 0;
         bottom: -4px;
+        z-index: 0;
         transition: width 400ms ease; }
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
