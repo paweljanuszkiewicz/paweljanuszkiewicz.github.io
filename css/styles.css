@@ -91,7 +91,6 @@ aside {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -141,9 +140,6 @@ nav {
       background-color: rgba(207, 207, 207, 0.5); }
 
 @media (min-width: 1200px) {
-  #fullpage {
-    margin-right: 75px; }
-
   aside {
     top: 0;
     bottom: 0;
@@ -235,7 +231,6 @@ nav {
         position: absolute;
         left: 0;
         bottom: -4px;
-        z-index: 0;
         transition: width 400ms ease; }
       nav a:hover::after, nav a.active::after {
         width: 100%; } }
@@ -313,8 +308,7 @@ body {
     opacity: 0.4; } }
 section {
   display: block;
-  min-height: 100vh;
-  height: auto !important; }
+  min-height: 100vh; }
   section h1 {
     font-size: 2.4rem;
     color: #010101;
