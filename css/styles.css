@@ -392,9 +392,12 @@ section[data-anchor='start'] {
   section[data-anchor='start'] h1, section[data-anchor='start'] p {
     padding: 0;
     text-align: center;
-    margin: 20px auto; }
+    margin: 0 auto; }
   section[data-anchor='start'] h1 {
+    margin-top: 40px;
     padding-bottom: 10px; }
+  section[data-anchor='start'] p {
+    margin-bottom: 40px; }
 
 .lang {
   color: #8b8b8b;
