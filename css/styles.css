@@ -145,7 +145,7 @@ nav {
 
 @media (min-width: 1200px) {
   #fullpage {
-    margin-right: 54px; }
+    margin-right: 74px; }
 
   aside {
     top: 0;
@@ -174,7 +174,8 @@ nav {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    border-left: 1px solid #CFCFCF; }
+    border-left: 1px solid #CFCFCF;
+    padding: 10px; }
 
   nav {
     max-width: 0;
