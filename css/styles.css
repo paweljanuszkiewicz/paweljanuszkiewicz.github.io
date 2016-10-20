@@ -483,7 +483,8 @@ section[data-anchor='skills'] h3 {
   font-size: 0.6rem;
   border-radius: 4px;
   max-width: 120px;
-  min-height: 48px; }
+  min-height: 49px;
+  vertical-align: middle; }
 
 .btn-demo {
   background-color: #333634;
