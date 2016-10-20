@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Andada&subset=latin-ext");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -136,6 +138,7 @@ nav {
     width: 100%;
     text-decoration: none;
     font-size: 0.7rem;
+    font-weight: 400;
     text-transform: uppercase; }
     nav a:active {
       background-color: rgba(207, 207, 207, 0.5); }
@@ -189,8 +192,8 @@ nav {
       max-width: 400px;
       border-left-color: #CFCFCF; }
     nav ul {
-      margin-left: 50px;
-      margin-right: 140px;
+      margin-left: 60px;
+      margin-right: 160px;
       width: auto; }
     nav li {
       padding-bottom: 20px;
@@ -200,12 +203,9 @@ nav {
           -ms-transform: translateX(40px);
               transform: translateX(40px);
       opacity: 0;
-      font-weight: bold;
       transition: opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98), -webkit-transform 300ms ease;
       transition: transform 300ms ease, opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98);
       transition: transform 300ms ease, opacity 300ms cubic-bezier(0.795, 0.19, 0.73, 0.98), -webkit-transform 300ms ease; }
-      nav li::before {
-        content: "# "; }
       nav li:last-child {
         padding-bottom: 0; }
       nav li.show {
@@ -221,8 +221,8 @@ nav {
       padding: 0;
       padding-top: 20px;
       text-transform: none;
+      font-weight: 900;
       font-size: 1rem;
-      font-weight: bold;
       position: relative;
       width: auto; }
       nav a:active {
@@ -242,7 +242,7 @@ nav {
 html {
   font-size: 24px;
   color: #010101;
-  font-family: serif; }
+  font-family: "Lato", sans-serif; }
 
 body {
   background-color: #fff; }
@@ -319,6 +319,8 @@ section {
   display: block;
   min-height: 100vh; }
   section h1 {
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
     font-size: 2.4rem;
     color: #010101;
     text-align: right;
@@ -340,6 +342,8 @@ section {
     line-height: 1.2rem;
     font-size: 0.7rem;
     text-align: left;
+    font-weight: 300;
+    letter-spacing: 0.04rem;
     color: #8b8b8b;
     max-width: 800px; }
   section ul {
@@ -402,7 +406,8 @@ section[data-anchor='start'] {
 .lang {
   color: #8b8b8b;
   position: absolute;
-  font-family: sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.12rem;
   font-size: 0.9rem;
   top: 18px;
   right: 16px;
@@ -588,7 +593,9 @@ section[data-anchor='contact'] {
     text-align: left;
     font-size: 18px;
     color: #fff;
-    padding: 50px 0; }
+    padding: 50px 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400; }
   section[data-anchor='contact'] p {
     display: inline-block;
     font-size: 12px;
@@ -656,7 +663,7 @@ footer {
   section[data-anchor='contact'] h1 {
     font-size: 1.6rem; }
   section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
-    font-size: 0.7rem; } }
+    font-size: 0.6rem; } }
 @media (min-width: 1200px) {
   section[data-anchor='contact'] {
     min-height: 100vh;
