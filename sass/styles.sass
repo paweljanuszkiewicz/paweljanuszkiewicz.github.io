@@ -24,6 +24,7 @@ body
 //arrow
 $arrowOpacity: .4
 .arrow
+  display: none
   position: absolute
   height: 80px
   bottom: 0
@@ -55,6 +56,9 @@ $arrowOpacity: .4
     transform: translateY(0)
     opacity: $arrowOpacity
 
+@media (min-width: $medium)
+  .arrow
+    display: block
 // SECTIONS
 //  all
 section
@@ -119,6 +123,10 @@ strong
   border-bottom: 1px dashed $grey
 
 //  start
+section[data-anchor='start']
+  display: flex
+  justify-content: center
+  align-items: center
 .lang
   color: $grey
   position: absolute
@@ -275,22 +283,15 @@ section[data-anchor='skills']
 section[data-anchor='contact']
   background-color: $lightblack
   position: relative
+  display: block
+  min-height: auto
   h1
     text-align: left
     font-size: 18px
     color: $white
-  footer
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    text-align: right
-    padding-bottom: 10px
-    padding-right: 20px
   p
     display: inline-block
     font-size: 12px
-    color: $white
     vertical-align: baseline
   .mail
     font-size: 16px
@@ -330,7 +331,16 @@ section[data-anchor='contact']
     content: url('../images/copy.png')
     vertical-align: -50%
     padding-right: 8px
-
+footer
+  background-color: $white
+  text-align: right
+  padding: 10px 20px
+  p
+    margin: 8px
+    color: $black
+  .btn
+    padding: 10px 15px
+    min-height: auto
 @media (min-width: 500px)
   section[data-anchor='contact']
     h1
@@ -339,10 +349,19 @@ section[data-anchor='contact']
       font-size: .6rem
 @media (min-width: $medium)
   section[data-anchor='contact']
+    min-height: 100vh
     h1
       font-size: 1.6rem
     p, a.btn
       font-size: .7rem
+  footer
+    background-color: transparent
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    p
+      color: $white
 @media (min-width: $mobileMenu)
   section[data-anchor='contact']
     h1

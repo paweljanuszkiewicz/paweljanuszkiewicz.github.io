@@ -256,6 +256,7 @@ body {
   max-width: 1240px; }
 
 .arrow {
+  display: none;
   position: absolute;
   height: 80px;
   bottom: 0;
@@ -311,6 +312,9 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 0.4; } }
+@media (min-width: 640px) {
+  .arrow {
+    display: block; } }
 section {
   display: block;
   min-height: 100vh; }
@@ -374,6 +378,17 @@ section {
       padding-top: 0; } }
 strong {
   border-bottom: 1px dashed #8b8b8b; }
+
+section[data-anchor='start'] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .lang {
   color: #8b8b8b;
@@ -558,23 +573,16 @@ section[data-anchor='skills'] h3 {
               flex: 1 0 auto; } }
 section[data-anchor='contact'] {
   background-color: #333634;
-  position: relative; }
+  position: relative;
+  display: block;
+  min-height: auto; }
   section[data-anchor='contact'] h1 {
     text-align: left;
     font-size: 18px;
     color: #fff; }
-  section[data-anchor='contact'] footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: right;
-    padding-bottom: 10px;
-    padding-right: 20px; }
   section[data-anchor='contact'] p {
     display: inline-block;
     font-size: 12px;
-    color: #fff;
     vertical-align: baseline; }
   section[data-anchor='contact'] .mail {
     font-size: 16px; }
@@ -619,16 +627,38 @@ section[data-anchor='contact'] {
     vertical-align: -50%;
     padding-right: 8px; }
 
+footer {
+  background-color: #fff;
+  text-align: right;
+  padding: 10px 20px; }
+  footer p {
+    margin: 8px;
+    color: #010101; }
+  footer .btn {
+    padding: 10px 15px;
+    min-height: auto; }
+
 @media (min-width: 500px) {
   section[data-anchor='contact'] h1 {
     font-size: 1.2rem; }
   section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
     font-size: 0.6rem; } }
 @media (min-width: 640px) {
-  section[data-anchor='contact'] h1 {
-    font-size: 1.6rem; }
-  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
-    font-size: 0.7rem; } }
+  section[data-anchor='contact'] {
+    min-height: 100vh; }
+    section[data-anchor='contact'] h1 {
+      font-size: 1.6rem; }
+    section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
+      font-size: 0.7rem; }
+
+  footer {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    footer p {
+      color: #fff; } }
 @media (min-width: 1200px) {
   section[data-anchor='contact'] h1 {
     font-size: 2.6rem; }
