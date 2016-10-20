@@ -95,7 +95,7 @@ section
     font-weight: 300
     letter-spacing: .04rem
     color: $grey
-    max-width: 800px
+    // max-width: 800px
   ul
     margin-left: 24px
     margin-right: 10px
@@ -109,9 +109,9 @@ section
     margin: 10px 16px
   a
     white-space: nowrap
-    color: $lightblack
+    color: $black
     text-decoration: none
-    border-bottom: 1px solid $lightblack
+    border-bottom: 1px solid $grey
     transition: all 200ms ease
   a:hover
     border-color: transparent
@@ -165,7 +165,7 @@ section[data-anchor='start']
 //  skills
 section[data-anchor='skills']
   h1
-    font-size: 1.7rem
+    // font-size: 1.7rem
   h3
     margin-top: 24px
 
@@ -209,12 +209,12 @@ section[data-anchor='skills']
   border-radius: 4px
   max-width: 120px
   min-height: 48px
+  // line-height: 1
 
 .btn-demo
   background-color: $lightblack
   color: $white
   border: 1px solid transparent
-  vertical-align: top
   &:hover
     background-color: $white
     color: $black
@@ -226,7 +226,11 @@ section[data-anchor='skills']
   padding-left: 20px
   margin-left: 5px
   &::before
-    content: url('../images/mark-github.png')
+    content: ''
+    display: inline-block
+    width: 16px
+    height: 19px
+    background: url('../images/mark-github.png') 0 0 no-repeat
     vertical-align: middle
     padding-right: 4px
   &:hover
@@ -310,7 +314,7 @@ section[data-anchor='contact']
     font-weight: 400
   p
     display: inline-block
-    font-size: 12px
+    font-size: 11px
     vertical-align: baseline
   .mail
     font-size: 16px
@@ -358,7 +362,8 @@ footer
     margin: 8px
     color: $lightblack
   .btn
-    padding: 10px 15px
+    font-size: 11px
+    padding: 8px 10px 6px 10px
     min-height: auto
 @media (min-width: 500px)
   section[data-anchor='contact']

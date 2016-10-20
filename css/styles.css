@@ -213,6 +213,8 @@ nav {
             -ms-transform: none;
                 transform: none;
         opacity: 1; }
+    nav li::before {
+      content: "# "; }
     nav li:first-child > a {
       padding-top: 0; }
     nav li:last-child {
@@ -344,8 +346,7 @@ section {
     text-align: left;
     font-weight: 300;
     letter-spacing: 0.04rem;
-    color: #8b8b8b;
-    max-width: 800px; }
+    color: #8b8b8b; }
   section ul {
     margin-left: 24px;
     margin-right: 10px; }
@@ -359,9 +360,9 @@ section {
     margin: 10px 16px; }
   section a {
     white-space: nowrap;
-    color: #333634;
+    color: #010101;
     text-decoration: none;
-    border-bottom: 1px solid #333634;
+    border-bottom: 1px solid #8b8b8b;
     transition: all 200ms ease; }
   section a:hover {
     border-color: transparent;
@@ -424,8 +425,6 @@ section[data-anchor='start'] {
   .lang {
     right: auto;
     left: 20px; } }
-section[data-anchor='skills'] h1 {
-  font-size: 1.7rem; }
 section[data-anchor='skills'] h3 {
   margin-top: 24px; }
 
@@ -482,8 +481,7 @@ section[data-anchor='skills'] h3 {
 .btn-demo {
   background-color: #333634;
   color: #fff;
-  border: 1px solid transparent;
-  vertical-align: top; }
+  border: 1px solid transparent; }
   .btn-demo:hover {
     background-color: #fff;
     color: #010101;
@@ -495,7 +493,11 @@ section[data-anchor='skills'] h3 {
   padding-left: 20px;
   margin-left: 5px; }
   .btn-code::before {
-    content: url("../images/mark-github.png");
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 19px;
+    background: url("../images/mark-github.png") 0 0 no-repeat;
     vertical-align: middle;
     padding-right: 4px; }
   .btn-code:hover {
@@ -598,7 +600,7 @@ section[data-anchor='contact'] {
     font-weight: 400; }
   section[data-anchor='contact'] p {
     display: inline-block;
-    font-size: 12px;
+    font-size: 11px;
     vertical-align: baseline; }
   section[data-anchor='contact'] .mail {
     font-size: 16px; }
@@ -651,7 +653,8 @@ footer {
     margin: 8px;
     color: #333634; }
   footer .btn {
-    padding: 10px 15px;
+    font-size: 11px;
+    padding: 8px 10px 6px 10px;
     min-height: auto; }
 
 @media (min-width: 500px) {
