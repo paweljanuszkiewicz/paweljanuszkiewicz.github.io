@@ -24,12 +24,12 @@ body
 //arrow
 $arrowOpacity: .4
 .arrow
-  display: none
   position: absolute
-  height: 80px
   bottom: 0
   left: 0
   right: 0
+  display: none
+  height: 80px
   margin-left: auto
   margin-right: auto
   cursor: pointer
@@ -59,19 +59,18 @@ $arrowOpacity: .4
 @media (min-width: $medium)
   .arrow
     display: block
+
 // SECTIONS
 //  all
 section
   display: block
   min-height: 100vh
-  // fullPage.js mod
-  // height: auto !important
   h1
     font-size: 2.4rem
     color: $black
     text-align: right
     margin: 0 20px
-    padding: 50px 0
+    padding: 60px 0 40px 0
   h2, h3
     color: $lightblack
   h2
@@ -127,6 +126,14 @@ section[data-anchor='start']
   display: flex
   justify-content: center
   align-items: center
+  h1, p
+    padding: 0
+    text-align: center
+    margin: 0 auto
+
+  h1
+    padding-bottom: 10px
+
 .lang
   color: $grey
   position: absolute
@@ -140,19 +147,11 @@ section[data-anchor='start']
   transition: color 400ms ease
 .en:hover, .pl:hover
   color: $black
+
 @media (min-width: $mobileMenu)
   .lang
     right: auto
     left: 20px
-
-section[data-anchor='start']
-  h1, p
-    padding: 0
-    text-align: center
-    margin: 0 auto
-
-  h1
-    padding-bottom: 10px
 
 //  skills
 section[data-anchor='skills']
@@ -170,7 +169,7 @@ section[data-anchor='skills']
   flex-wrap: nowrap
   .box
     flex: 1 1 200px
-    margin: 16px 10px
+    // margin: 16px 10px desktop?
     padding: 20px
 
 .box
@@ -277,6 +276,14 @@ section[data-anchor='skills']
     p
       flex: 1 0 auto
 
+//  psd padding + arrow
+section[data-anchor='psd']
+  position: relative
+  padding-bottom: 40px
+@media (min-width: $medium)
+  section[data-anchor='psd']
+    padding-bottom: 140px
+
 //  contact
 //font-size in px for chrome mobile (unpredictible rem working)
 //the issue is related with font boosting
@@ -289,6 +296,7 @@ section[data-anchor='contact']
     text-align: left
     font-size: 18px
     color: $white
+    padding: 50px 0
   p
     display: inline-block
     font-size: 12px
@@ -349,21 +357,16 @@ footer
       font-size: .6rem
 @media (min-width: $medium)
   section[data-anchor='contact']
-    min-height: 100vh
     h1
       font-size: 1.6rem
     p, a.btn
       font-size: .7rem
-  footer
-    background-color: transparent
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    p
-      color: $white
 @media (min-width: $mobileMenu)
   section[data-anchor='contact']
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: flex-start
     h1
       font-size: 2.6rem
     .copy-section
@@ -375,3 +378,11 @@ footer
     .hover-section:hover > .copy-section
       opacity: 1
       transform: none
+  footer
+    background-color: transparent
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    p
+      color: $white

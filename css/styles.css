@@ -256,12 +256,12 @@ body {
   max-width: 1240px; }
 
 .arrow {
-  display: none;
   position: absolute;
-  height: 80px;
   bottom: 0;
   left: 0;
   right: 0;
+  display: none;
+  height: 80px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer; }
@@ -323,7 +323,7 @@ section {
     color: #010101;
     text-align: right;
     margin: 0 20px;
-    padding: 50px 0; }
+    padding: 60px 0 40px 0; }
   section h2, section h3 {
     color: #333634; }
   section h2 {
@@ -389,6 +389,12 @@ section[data-anchor='start'] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  section[data-anchor='start'] h1, section[data-anchor='start'] p {
+    padding: 0;
+    text-align: center;
+    margin: 0 auto; }
+  section[data-anchor='start'] h1 {
+    padding-bottom: 10px; }
 
 .lang {
   color: #8b8b8b;
@@ -410,13 +416,6 @@ section[data-anchor='start'] {
   .lang {
     right: auto;
     left: 20px; } }
-section[data-anchor='start'] h1, section[data-anchor='start'] p {
-  padding: 0;
-  text-align: center;
-  margin: 0 auto; }
-section[data-anchor='start'] h1 {
-  padding-bottom: 10px; }
-
 section[data-anchor='skills'] h1 {
   font-size: 1.7rem; }
 section[data-anchor='skills'] h3 {
@@ -442,7 +441,6 @@ section[data-anchor='skills'] h3 {
     -webkit-flex: 1 1 200px;
         -ms-flex: 1 1 200px;
             flex: 1 1 200px;
-    margin: 16px 10px;
     padding: 20px; }
 
 .box h2 {
@@ -571,6 +569,13 @@ section[data-anchor='skills'] h3 {
       -webkit-flex: 1 0 auto;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; } }
+section[data-anchor='psd'] {
+  position: relative;
+  padding-bottom: 40px; }
+
+@media (min-width: 640px) {
+  section[data-anchor='psd'] {
+    padding-bottom: 140px; } }
 section[data-anchor='contact'] {
   background-color: #333634;
   position: relative;
@@ -579,7 +584,8 @@ section[data-anchor='contact'] {
   section[data-anchor='contact'] h1 {
     text-align: left;
     font-size: 18px;
-    color: #fff; }
+    color: #fff;
+    padding: 50px 0; }
   section[data-anchor='contact'] p {
     display: inline-block;
     font-size: 12px;
@@ -644,12 +650,37 @@ footer {
   section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
     font-size: 0.6rem; } }
 @media (min-width: 640px) {
+  section[data-anchor='contact'] h1 {
+    font-size: 1.6rem; }
+  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
+    font-size: 0.7rem; } }
+@media (min-width: 1200px) {
   section[data-anchor='contact'] {
-    min-height: 100vh; }
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
     section[data-anchor='contact'] h1 {
-      font-size: 1.6rem; }
-    section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
-      font-size: 0.7rem; }
+      font-size: 2.6rem; }
+    section[data-anchor='contact'] .copy-section {
+      display: inline-block; }
+    section[data-anchor='contact'] .copy-section {
+      opacity: 0;
+      -webkit-transform: translateY(-100px);
+          -ms-transform: translateY(-100px);
+              transform: translateY(-100px);
+      transition: all 400ms ease; }
+    section[data-anchor='contact'] .hover-section:hover > .copy-section {
+      opacity: 1;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
 
   footer {
     background-color: transparent;
@@ -659,19 +690,3 @@ footer {
     right: 0; }
     footer p {
       color: #fff; } }
-@media (min-width: 1200px) {
-  section[data-anchor='contact'] h1 {
-    font-size: 2.6rem; }
-  section[data-anchor='contact'] .copy-section {
-    display: inline-block; }
-  section[data-anchor='contact'] .copy-section {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-        -ms-transform: translateY(-100px);
-            transform: translateY(-100px);
-    transition: all 400ms ease; }
-  section[data-anchor='contact'] .hover-section:hover > .copy-section {
-    opacity: 1;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none; } }
