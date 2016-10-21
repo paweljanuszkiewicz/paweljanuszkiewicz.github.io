@@ -9,6 +9,12 @@ $(document).ready(function() {
       afterLoad: function(anchor, index) {
         if (anchor == 'skills' || anchor == 'js' || anchor == 'psd')
           anim(anchor, 400);
+        else if (anchor == 'start') {
+          setTimeout(function () {
+            anim(anchor);
+            console.log('start');
+          }, 2000)
+        }
         else
           anim(anchor);
         var $activeItem;
