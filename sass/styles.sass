@@ -264,14 +264,16 @@ section[data-anchor='skills']
     margin: 0
     & > img
       max-width: 500px
-      filter: blur(0px)   //hover shaking problem
+      filter: blur(0px)
+      //hover shaking problem
       transition: all 400ms ease
     &:hover > div
       transform: none
       opacity: 1
     &:hover > img
-      backface-visibility: hidden               //hover shaking problem
-      transform: translateZ(0) scale(1.0, 1.0)  //hover shaking problem
+      // backface-visibility: hidden               //hover shaking problem
+      transform: translateZ(0) scale(1.0, 1.0)
+      //hover shaking problem
       filter: blur(2px)
 
     & > div

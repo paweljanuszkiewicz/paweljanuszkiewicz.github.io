@@ -6,7 +6,7 @@ $(document).ready(function() {
       verticalCentered: false,
       fitToSection: false,
       scrollingSpeed: 1000,
-      afterLoad: function(anchor, index){
+      afterLoad: function(anchor, index) {
         if (anchor == 'skills' || anchor == 'js' || anchor == 'psd')
           anim(anchor, 400);
         else
