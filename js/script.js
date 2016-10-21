@@ -13,7 +13,7 @@ $(document).ready(function() {
           setTimeout(function () {
             anim(anchor);
             console.log('start');
-          }, 2000)
+          }, 1200)
         }
         else
           anim(anchor);
