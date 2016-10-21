@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // large screens
   if ($(window).width() > 1200 && $(window).height() > 900) {
     $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
@@ -6,6 +7,10 @@ $(document).ready(function() {
       fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index){
+        if (anchor == 'skills' || anchor == 'js' || anchor == 'psd')
+          anim(anchor, 400);
+        else
+          anim(anchor);
         var $activeItem;
         $activeItem = $('nav').find('a[href="#' + anchor + '"]');
         $activeItem
@@ -15,6 +20,28 @@ $(document).ready(function() {
           .children().removeClass('active');
       }
     });
+    //animation
+    // -start
+    function anim(section, delay) {
+      var animationDelay = delay || 800;
+      var $section = $('section[data-anchor="' + section + '"]');
+      var $animTop = $section.find('.anim-top');
+      if ($animTop.hasClass('end'))
+        return;
+      var $animFade = $section.find('.anim-fade');
+      if (section == 'start')
+        $animFade =  $animFade.add('aside.anim-fade');
+      var wait = $animTop.length * animationDelay;
+      $animTop.each(function (index) {
+        $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
+      });
+      setTimeout(function () {
+        $animFade.each(function (index) {
+          $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
+          console.log($(this));
+        });
+      }, wait);
+    }
   }
   else {
     $('nav a').on('click', function ( e ) {

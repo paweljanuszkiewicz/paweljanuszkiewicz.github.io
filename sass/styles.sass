@@ -176,7 +176,7 @@ section[data-anchor='skills']
   h1
     font-size: 2.4
 
-//  projects
+//  projects (js and psd)
 .flex-projects
   display: flex
   flex-direction: column
@@ -185,8 +185,10 @@ section[data-anchor='skills']
   flex-wrap: nowrap
   .box
     flex: 1 1 200px
-    // margin: 16px 10px desktop?
     padding: 20px
+@media (min-width: $mobileMenu)
+  .box
+    margin: 16px 10px
 
 .box
   h2
@@ -222,6 +224,7 @@ section[data-anchor='skills']
   background-color: $lightblack
   color: $white
   border: 1px solid transparent
+  padding-top: 16px
   &:hover
     background-color: $white
     color: $black
@@ -236,7 +239,7 @@ section[data-anchor='skills']
     content: ''
     display: inline-block
     width: 16px
-    height: 19px
+    height: 20px
     background: url('../images/mark-github.png') 0 0 no-repeat
     vertical-align: middle
     padding-right: 4px
@@ -261,11 +264,14 @@ section[data-anchor='skills']
     margin: 0
     & > img
       max-width: 500px
+      filter: blur(0px)   //hover shaking problem
       transition: all 400ms ease
     &:hover > div
       transform: none
       opacity: 1
     &:hover > img
+      backface-visibility: hidden               //hover shaking problem
+      transform: translateZ(0) scale(1.0, 1.0)  //hover shaking problem
       filter: blur(2px)
 
     & > div
@@ -409,3 +415,16 @@ footer
     right: 0
     p
       color: $white
+
+// animations load
+@media (min-width: $mobileMenu)
+  .anim-fade
+    opacity: 0
+    transition: opacity 800ms ease
+  .anim-top
+    transform: translateY(-200px)
+    opacity: 0
+    transition: all 800ms ease
+  .end
+    transform: none
+    opacity: 1

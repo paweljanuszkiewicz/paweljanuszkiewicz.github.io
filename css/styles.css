@@ -458,6 +458,9 @@ section[data-anchor='skills'] h3 {
             flex: 1 1 200px;
     padding: 20px; }
 
+@media (min-width: 1200px) {
+  .box {
+    margin: 16px 10px; } }
 .box h2 {
   border-bottom: 1px solid #CFCFCF; }
 .box p {
@@ -490,7 +493,8 @@ section[data-anchor='skills'] h3 {
 .btn-demo {
   background-color: #333634;
   color: #fff;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  padding-top: 16px; }
   .btn-demo:hover {
     background-color: #fff;
     color: #010101;
@@ -505,7 +509,7 @@ section[data-anchor='skills'] h3 {
     content: "";
     display: inline-block;
     width: 16px;
-    height: 19px;
+    height: 20px;
     background: url("../images/mark-github.png") 0 0 no-repeat;
     vertical-align: middle;
     padding-right: 4px; }
@@ -532,6 +536,8 @@ section[data-anchor='skills'] h3 {
     margin: 0; }
     .image > img {
       max-width: 500px;
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
       transition: all 400ms ease; }
     .image:hover > div {
       -webkit-transform: none;
@@ -539,6 +545,10 @@ section[data-anchor='skills'] h3 {
               transform: none;
       opacity: 1; }
     .image:hover > img {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transform: translateZ(0) scale(1, 1);
+              transform: translateZ(0) scale(1, 1);
       -webkit-filter: blur(2px);
               filter: blur(2px); }
     .image > div {
@@ -712,3 +722,20 @@ footer {
     right: 0; }
     footer p {
       color: #fff; } }
+@media (min-width: 1200px) {
+  .anim-fade {
+    opacity: 0;
+    transition: opacity 800ms ease; }
+
+  .anim-top {
+    -webkit-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0;
+    transition: all 800ms ease; }
+
+  .end {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    opacity: 1; } }
