@@ -12,7 +12,6 @@ $(document).ready(function() {
         else if (anchor == 'start') {
           setTimeout(function () {
             anim(anchor);
-            console.log('start');
           }, 1200)
         }
         else
@@ -44,7 +43,6 @@ $(document).ready(function() {
       setTimeout(function () {
         $animFade.each(function (index) {
           $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
-          console.log($(this));
         });
       }, wait);
     }
@@ -83,6 +81,7 @@ $(document).ready(function() {
         $(this).addClass('show');
       });
     });
+    $nav.css({'border': '1px solid red'});
     $(this).addClass('active');
   }
   $.fn.menuHide = function () {

@@ -666,8 +666,6 @@ footer {
   background-color: #fff;
   text-align: right;
   padding: 10px 20px; }
-  footer a:not(.btn) {
-    color: #fff; }
   footer p {
     margin: 8px;
     color: #333634; }
