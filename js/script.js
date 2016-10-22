@@ -7,15 +7,17 @@ $(document).ready(function() {
       fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index) {
-        if (anchor == 'skills')
-          anim(anchor, 200);
-        else if (anchor == 'js' || anchor == 'psd')
-          anim(anchor, 400);
-        else if (anchor == 'start') {
+        if (anchor == 'start') {
           setTimeout(function () {
             anim(anchor);
           }, 1200)
         }
+        else if (anchor == 'about')
+          anim(anchor, 500);
+        else if (anchor == 'skills')
+          anim(anchor, 200);
+        else if (anchor == 'js' || anchor == 'psd')
+          anim(anchor, 400);
         else
           anim(anchor);
         var $activeItem;
