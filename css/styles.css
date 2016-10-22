@@ -456,17 +456,8 @@ section[data-anchor='skills'] h3 {
     -webkit-flex: 1 1 200px;
         -ms-flex: 1 1 200px;
             flex: 1 1 200px;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-flex-basis: 200px;
-        -ms-flex-preferred-size: 200px;
-            flex-basis: 200px;
     padding: 20px; }
 
-@media (min-width: 1200px) {
-  .box {
-    margin: 16px 10px; } }
 .box h2 {
   border-bottom: 1px solid #CFCFCF; }
 .box p {
@@ -581,6 +572,11 @@ section[data-anchor='skills'] h3 {
       opacity: 0;
       transition: all 400ms ease; }
 
+  .flex-projects .box {
+    -webkit-flex: 0 1 500px;
+        -ms-flex: 0 1 500px;
+            flex: 0 1 500px; }
+
   .box {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -593,7 +589,8 @@ section[data-anchor='skills'] h3 {
             align-items: stretch;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    margin: 16px 10px; }
     .box .image, .box h2, .box .buttons {
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
@@ -609,6 +606,9 @@ section[data-anchor='psd'] {
 @media (min-width: 640px) {
   section[data-anchor='psd'] {
     padding-bottom: 140px; } }
+@media (min-width: 1200px) {
+  section[data-anchor='psd'] {
+    padding-bottom: 0; } }
 section[data-anchor='contact'] {
   background-color: #333634;
   position: relative;

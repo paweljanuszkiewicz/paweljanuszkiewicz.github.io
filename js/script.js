@@ -7,7 +7,9 @@ $(document).ready(function() {
       fitToSection: false,
       scrollingSpeed: 1000,
       afterLoad: function(anchor, index) {
-        if (anchor == 'skills' || anchor == 'js' || anchor == 'psd')
+        if (anchor == 'skills')
+          anim(anchor, 200);
+        else if (anchor == 'js' || anchor == 'psd')
           anim(anchor, 400);
         else if (anchor == 'start') {
           setTimeout(function () {
@@ -81,7 +83,7 @@ $(document).ready(function() {
         $(this).addClass('show');
       });
     });
-    $nav.css({'border': '1px solid red'});
+    // $nav.css({'border': '1px solid red'});
     $(this).addClass('active');
   }
   $.fn.menuHide = function () {

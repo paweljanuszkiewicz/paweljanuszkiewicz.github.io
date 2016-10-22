@@ -185,12 +185,7 @@ section[data-anchor='skills']
   flex-wrap: nowrap
   .box
     flex: 1 1 200px
-    flex-grow: 1
-    flex-basis: 200px
     padding: 20px
-@media (min-width: $mobileMenu)
-  .box
-    margin: 16px 10px
 
 .box
   h2
@@ -296,11 +291,17 @@ section[data-anchor='skills']
       opacity: 0
       transition: all 400ms ease
 
+  //edge 'not growing' solution
+  .flex-projects
+    .box
+      flex: 0 1 500px
+
   .box
     display: flex
     flex-direction: column
     align-items: stretch
     justify-content: space-between
+    margin: 16px 10px
     .image, h2, .buttons
       flex: 0 0 auto
     p
@@ -313,6 +314,9 @@ section[data-anchor='psd']
 @media (min-width: $medium)
   section[data-anchor='psd']
     padding-bottom: 140px
+@media (min-width: $mobileMenu)
+  section[data-anchor='psd']
+    padding-bottom: 0
 
 //  contact
 //font-size in px for chrome mobile (unpredictible rem working)
