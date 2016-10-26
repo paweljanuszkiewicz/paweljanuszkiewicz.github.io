@@ -481,17 +481,15 @@ section[data-anchor='skills'] h3 {
 .btn {
   display: inline-block;
   padding: 14px 24px;
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   border-radius: 4px;
   max-width: 120px;
-  min-height: 49px;
   vertical-align: middle; }
 
 .btn-demo {
   background-color: #333634;
   color: #fff;
-  border: 1px solid transparent;
-  padding-top: 16px; }
+  border: 1px solid transparent; }
   .btn-demo:hover {
     background-color: #fff;
     color: #010101;
@@ -503,11 +501,11 @@ section[data-anchor='skills'] h3 {
   padding-left: 20px;
   margin-left: 5px; }
   .btn-code::before {
-    content: "";
-    display: inline-block;
+    content: url("../images/mark-github.png");
     width: 16px;
-    height: 20px;
-    background: url("../images/mark-github.png") 0 0 no-repeat;
+    height: 16px;
+    float: left;
+    display: inline-block;
     vertical-align: middle;
     padding-right: 4px; }
   .btn-code:hover {
@@ -677,8 +675,11 @@ footer {
     color: #333634; }
   footer .btn {
     font-size: 11px;
-    padding: 8px 10px 6px 10px;
-    min-height: auto; }
+    padding: 8px 10px 6px 10px; }
+  footer .btn-code::before {
+    content: url("../images/mark-github-small.png");
+    width: 12px;
+    height: 12px; }
 
 @media (min-width: 500px) {
   section[data-anchor='contact'] h1 {
@@ -687,9 +688,7 @@ footer {
     font-size: 0.6rem; } }
 @media (min-width: 640px) {
   section[data-anchor='contact'] h1 {
-    font-size: 1.6rem; }
-  section[data-anchor='contact'] p, section[data-anchor='contact'] a.btn {
-    font-size: 0.6rem; } }
+    font-size: 1.6rem; } }
 @media (min-width: 1200px) {
   section[data-anchor='contact'] {
     min-height: 100vh;
