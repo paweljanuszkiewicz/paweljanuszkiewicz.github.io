@@ -453,9 +453,9 @@ section[data-anchor='skills'] h3 {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
   .flex-projects .box {
-    -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     padding: 20px; }
 
 .box h2 {
