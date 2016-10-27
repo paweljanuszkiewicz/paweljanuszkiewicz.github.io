@@ -456,7 +456,8 @@ section[data-anchor='skills'] h3 {
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    padding: 20px; }
+    padding: 20px;
+    padding-bottom: 40px; }
 
 .box h2 {
   border-bottom: 1px solid #CFCFCF; }
