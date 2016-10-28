@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // large screens
-  if ($(window).width() > 1200 && $(window).height() > 900) {
+  if ($(window).width() > 1200 && $(window).height() > 860) {
     $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
       verticalCentered: false,
