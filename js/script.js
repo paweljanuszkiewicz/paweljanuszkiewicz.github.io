@@ -52,6 +52,7 @@ $(document).ready(function() {
     }
   }
   else {
+    //menu on mobile
     $('nav a').on('click', function ( e ) {
       var to = $(this).attr('href');
       to = to.substring(1, to.length);
@@ -85,7 +86,6 @@ $(document).ready(function() {
         $(this).addClass('show');
       });
     });
-    // $nav.css({'border': '1px solid red'});
     $(this).addClass('active');
   }
   $.fn.menuHide = function () {
