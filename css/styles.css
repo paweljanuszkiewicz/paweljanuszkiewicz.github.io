@@ -319,8 +319,7 @@ body {
   .arrow {
     display: block; } }
 section {
-  display: block;
-  min-height: 100vh; }
+  display: block; }
   section h1 {
     font-family: "Times New Roman", serif;
     font-weight: 400;
@@ -328,7 +327,7 @@ section {
     color: #010101;
     text-align: right;
     margin: 0 20px;
-    padding: 60px 0 30px 0; }
+    padding: 80px 0 40px 0; }
   section h2, section h3 {
     color: #333634; }
   section h2 {
@@ -372,8 +371,9 @@ section {
 @media (min-width: 640px) {
   section h1 {
     font-size: 2.4rem;
-    padding-bottom: 40px; } }
-@media (min-width: 1200px) {
+    padding-bottom: 60px;
+    padding-top: 180px; } }
+@media (min-width: 1200px) and (min-height: 861px) {
   section {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -398,7 +398,8 @@ section[data-anchor='start'] {
           justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  min-height: 100vh; }
   section[data-anchor='start'] h1, section[data-anchor='start'] p {
     padding: 0;
     text-align: center;

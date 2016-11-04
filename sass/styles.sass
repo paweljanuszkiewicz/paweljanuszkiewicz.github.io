@@ -67,7 +67,6 @@ $arrowOpacity: .4
 //  all
 section
   display: block
-  min-height: 100vh
   h1
     font-family: 'Times New Roman', serif
     font-weight: 400
@@ -75,7 +74,7 @@ section
     color: $black
     text-align: right
     margin: 0 20px
-    padding: 60px 0 30px 0
+    padding: 80px 0 40px 0
   h2, h3
     color: $lightblack
   h2
@@ -121,8 +120,9 @@ section
   section
     h1
       font-size: 2.4rem
-      padding-bottom: 40px
-@media (min-width: $mobileMenu)
+      padding-bottom: 60px
+      padding-top: 180px
+@media (min-width: $mobileMenu) and (min-height: 861px)
   section
     display: flex
     justify-content: center
@@ -138,6 +138,7 @@ section[data-anchor='start']
   display: flex
   justify-content: center
   align-items: center
+  min-height: 100vh
   h1, p
     padding: 0
     text-align: center
@@ -215,7 +216,6 @@ section[data-anchor='skills']
   font-size: .68rem
   border-radius: 4px
   max-width: 120px
-  // min-height: 49px
   vertical-align: middle
 
 .btn-demo

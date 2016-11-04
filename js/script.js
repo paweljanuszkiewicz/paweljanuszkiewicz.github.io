@@ -1,13 +1,20 @@
 $(document).ready(function() {
-  // large screens
-  if ($(window).width() > 1200 && $(window).height() > 860) {
-    // $(window).on('resize', deleteFullPage);
-    $('#fullpage').fullpage({
-      anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
-      verticalCentered: false,
-      fitToSection: false,
-      scrollingSpeed: 1000,
-      afterLoad: function(anchor, index) {
+  $('#fullpage').fullpage({
+    anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
+    verticalCentered: false,
+    fitToSection: false,
+    scrollingSpeed: 1000,
+    responsiveWidth: 1200,
+    responsiveHeight: 860,
+    afterResize: function () {
+      console.log('resize');
+      $('.anim-fade, .anim-top').each(function () {
+        if ( !($(this).hasClass('end')) )
+            $(this).addClass('end');
+      });
+    },
+    afterLoad: function(anchor, index) {
+      if ($(window).width() > 1200 && $(window).height() > 860) {
         if (anchor == 'start') {
           setTimeout(function () {
             anim(anchor);
@@ -29,43 +36,41 @@ $(document).ready(function() {
           .siblings()
           .children().removeClass('active');
       }
-    });
-    //animation
-    // -start
-    function anim(section, delay) {
-      var animationDelay = delay || 800;
-      var $section = $('section[data-anchor="' + section + '"]');
-      var $animTop = $section.find('.anim-top');
-      if ($animTop.hasClass('end'))
-        return;
-      var $animFade = $section.find('.anim-fade');
-      if (section == 'start')
-        $animFade =  $animFade.add('aside.anim-fade');
-      var wait = $animTop.length * animationDelay;
+    }
+  });
+  //animation
+  // -start
+  function anim(section, delay) {
+    var animationDelay = delay || 800;
+    var $section = $('section[data-anchor="' + section + '"]');
+    var $animTop = $section.find('.anim-top');
+    if ($animTop.hasClass('end'))
+      return;
+    var $animFade = $section.find('.anim-fade');
+    if (section == 'start')
+      $animFade =  $animFade.add('aside.anim-fade');
+    var wait = $animTop.length * animationDelay;
       $animTop.each(function (index) {
+      $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
+    });
+    setTimeout(function () {
+      $animFade.each(function (index) {
         $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
       });
-      setTimeout(function () {
-        $animFade.each(function (index) {
-          $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
-        });
-      }, wait);
-    }
-    $('.arrow').on('click', function () {
-      $.fn.fullpage.moveSectionDown();
-    });
+    }, wait);
   }
-  else {
-    //menu on mobile
-    $('nav a').on('click', function ( e ) {
-      var to = $(this).attr('href');
-      to = to.substring(1, to.length);
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: $('section[data-anchor="' + to + '"]').position().top
-      }, 1000);
-    });
-  }
+  $('.arrow').on('click', function () {
+    $.fn.fullpage.moveSectionDown();
+  });
+  //menu on mobile
+  $('nav a').on('click', function ( e ) {
+    var to = $(this).attr('href');
+    to = to.substring(1, to.length);
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $('section[data-anchor="' + to + '"]').position().top
+    }, 1000);
+  });
   $('nav a').on('click', function () {
     $('.hamburger').menuHide();
     $(this).addClass('active');
