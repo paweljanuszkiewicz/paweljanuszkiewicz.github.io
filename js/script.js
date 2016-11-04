@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // large screens
   if ($(window).width() > 1200 && $(window).height() > 860) {
+    // $(window).on('resize', deleteFullPage);
     $('#fullpage').fullpage({
       anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
       verticalCentered: false,
@@ -50,6 +51,9 @@ $(document).ready(function() {
         });
       }, wait);
     }
+    $('.arrow').on('click', function () {
+      $.fn.fullpage.moveSectionDown();
+    });
   }
   else {
     //menu on mobile
@@ -62,9 +66,6 @@ $(document).ready(function() {
       }, 1000);
     });
   }
-  $('.arrow').on('click', function () {
-    $.fn.fullpage.moveSectionDown();
-  });
   $('nav a').on('click', function () {
     $('.hamburger').menuHide();
     $(this).addClass('active');

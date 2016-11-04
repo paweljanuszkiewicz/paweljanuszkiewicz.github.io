@@ -435,7 +435,7 @@ section[data-anchor='skills'] h3 {
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 2.4; } }
+    font-size: 2.4rem; } }
 .flex-projects {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -726,7 +726,7 @@ footer {
     right: 0; }
     footer p {
       color: #fff; } }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (min-height: 861px) {
   .anim-fade {
     opacity: 0;
     transition: opacity 800ms ease; }
