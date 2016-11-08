@@ -228,8 +228,6 @@ nav {
       font-size: 1rem;
       position: relative;
       width: auto; }
-      nav a:active {
-        background-color: #fff; }
       nav a::after {
         content: "";
         background-color: #010101;
