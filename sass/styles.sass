@@ -20,7 +20,7 @@ body
   margin: 0 auto
   max-width: 1920px
 
-.container-1260
+.container-1240
   margin: 0 auto
   max-width: 1240px
 
@@ -32,7 +32,7 @@ $arrowOpacity: .4
   left: 0
   right: 0
   display: none
-  height: 80px
+  height: 70px
   margin-left: auto
   margin-right: auto
   cursor: pointer
@@ -59,7 +59,6 @@ $arrowOpacity: .4
     transform: translateY(0)
     opacity: $arrowOpacity
 
-// @media (min-width: $medium) and (min-height: $minHeight)
 .arrow
   display: block
 
@@ -67,7 +66,7 @@ $arrowOpacity: .4
 //  all
 section
   display: block
-  padding-bottom: 80px
+  margin-bottom: 60px
   h1
     font-family: 'Times New Roman', serif
     font-weight: 400
@@ -117,18 +116,20 @@ section
     border-color: transparent
     color: $grey
 
-@media (min-width: $medium)
+@media #{$mediumScreen}
   section
+    margin-bottom: 120px
     h1
       font-size: 2.4rem
-      padding-bottom: 60px
-@media (min-width: $mobileMenu) and (min-height: $minHeight)
+      padding-bottom: 40px
+@media #{$largeScreen}
   section
+    margin-bottom: 0
     display: flex
     justify-content: center
     align-items: center
     h1
-      padding-top: 0
+      padding-top: 20px
 
 strong
   border-bottom: 1px dashed $grey
@@ -163,7 +164,7 @@ section[data-anchor='start']
 .en:hover, .pl:hover
   color: $black
 
-@media (min-width: $mobileMenu) and (min-height: $minHeight)
+@media #{$largeScreen}
   .lang
     right: auto
     left: 20px
@@ -172,10 +173,17 @@ section[data-anchor='start']
 section[data-anchor='skills']
   h3
     margin-top: 24px
+  p
+    margin-bottom: 0
+  
 
-@media (min-width: $mobileMenu)
+@media #{$mediumScreen}
   h1
     font-size: 2.4rem
+  .left
+    float: left
+    width: 50%
+    padding-right: 58px
 
 //  projects (js and psd)
 .flex-projects
@@ -244,14 +252,14 @@ section[data-anchor='skills']
     color: $black
     border: 1px solid $grey
 
-@media (min-width: $medium)
+@media #{$mediumScreen}
   .image
     float: left
     margin-right: 20px
     & > img
       max-width: 300px
 
-@media (min-width: $mobileMenu)
+@media #{$largeScreen}
   .flex-projects
     flex-direction: row
   .image
@@ -310,9 +318,10 @@ section[data-anchor='skills']
 //  psd padding + arrow
 section[data-anchor='psd']
   position: relative
-  padding-bottom: 120px
+  padding-bottom: 100px
+  margin-bottom: 0
 
-@media (min-width: $mobileMenu) and (min-height: $minHeight)
+@media #{$largeScreen}
   section[data-anchor='psd']
     padding-bottom: 0
 
@@ -324,7 +333,8 @@ section[data-anchor='contact']
   position: relative
   display: block
   min-height: auto
-  padding-bottom: 0
+  // padding-bottom: 0
+  margin-bottom: 0
   h1
     text-align: left
     font-size: 18px
@@ -388,17 +398,18 @@ footer
     content: url('../images/mark-github-small.png')
     width: 12px
     height: 12px
+  //contact font new breakpoint
 @media (min-width: 500px)
   section[data-anchor='contact']
     h1
       font-size: 1.2rem
     p, a.btn
       font-size: .6rem
-@media (min-width: $medium)
+@media #{$mediumScreen}
   section[data-anchor='contact']
     h1
       font-size: 1.6rem
-@media (min-width: $mobileMenu)
+@media #{$largeScreen}
   section[data-anchor='contact']
     min-height: 100vh
     display: flex
@@ -425,7 +436,7 @@ footer
       color: $white
 
 // animations load
-@media (min-width: $mobileMenu) and (min-height: $minHeight)
+@media #{$largeScreen}
   .anim-fade
     opacity: 0
     transition: opacity 800ms ease

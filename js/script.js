@@ -1,20 +1,21 @@
 $(document).ready(function() {
+  respW = 1200;
+  respH = 798;
   $('#fullpage').fullpage({
     anchors: ['start', 'about', 'skills', 'js', 'psd', 'contact'],
     verticalCentered: false,
     fitToSection: false,
     scrollingSpeed: 1000,
-    responsiveWidth: 1200,
-    responsiveHeight: 860,
+    responsiveWidth: respW,
+    responsiveHeight: respH,
     afterResize: function () {
-      console.log('resize');
       $('.anim-fade, .anim-top').each(function () {
         if ( !($(this).hasClass('end')) )
             $(this).addClass('end');
       });
     },
     afterLoad: function(anchor, index) {
-      if ($(window).width() > 1200 && $(window).height() > 860) {
+      if ($(window).width() > respW && $(window).height() > respH) {
         if (anchor == 'start') {
           setTimeout(function () {
             anim(anchor);
@@ -63,7 +64,7 @@ $(document).ready(function() {
   $('.arrow').on('click', function () {
     $.fn.fullpage.moveSectionDown();
   });
-  // menu on mobile (wo fullpage)
+  // menu on mobile (w/o fullpage)
   // $('nav a').on('click', function ( e ) {
   //   var to = $(this).attr('href');
   //   to = to.substring(1, to.length);
