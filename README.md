@@ -1,6 +1,4 @@
-# paweljanuszkiewicz.github.io
-
-## PORTFOLIO SITE
+# PORTFOLIO SITE
 
 ## Break points (mobile first approach)
 
