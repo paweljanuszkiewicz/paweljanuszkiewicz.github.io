@@ -121,7 +121,6 @@ section
     margin-bottom: 120px
     h1
       font-size: 2.4rem
-      padding-bottom: 40px
 @media #{$largeScreen}
   section
     margin-bottom: 0
@@ -130,6 +129,7 @@ section
     align-items: center
     h1
       padding-top: 20px
+      padding-bottom: 50px
 
 strong
   border-bottom: 1px dashed $grey
@@ -169,6 +169,22 @@ section[data-anchor='start']
     right: auto
     left: 20px
 
+// about
+section[data-anchor='about']
+  img
+    display: block
+    width: 280px
+    height: 280px
+    margin: 20px auto 40px auto
+    border-radius: 50%
+
+@media #{$mediumScreen}
+  section[data-anchor='about']
+    img
+      margin-top: 30px
+      margin-right: 80px
+      float: left
+        
 //  skills
 section[data-anchor='skills']
   h3
@@ -178,8 +194,6 @@ section[data-anchor='skills']
   
 
 @media #{$mediumScreen}
-  h1
-    font-size: 2.4rem
   .left
     float: left
     width: 50%
