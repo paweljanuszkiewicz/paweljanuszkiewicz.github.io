@@ -6,16 +6,17 @@ html(lang='pl')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='css/styles.css')
     link(rel='stylesheet', href='css/jquery.fullPage.css')
+    //- link(rel='shortcut icon', href='')
   body
     aside.anim-fade
       nav
         ul
           li: a(href='#start') Start
-          li: a(href='#about') About
-          li: a(href='#skills') Skills
+          li: a(href='#about') O mnie
+          li: a(href='#skills') Umiejętności
           li: a(href='#js') JavaScript
           li: a(href='#psd') PSD to HTML
-          li: a(href='#contact') Contact
+          li: a(href='#contact') Kontakt
       .icon
         .hamburger: div
     #fullpage.container-1920
@@ -25,8 +26,8 @@ html(lang='pl')
           | &nbsp;&nbsp;|&nbsp;&nbsp;
           span.pl pl
         .container-1240
-          h1.anim-top Welcome!
-          p.anim-top Click on menu or scroll!
+          h1.anim-top Witaj!
+          p.anim-top Kliknij w ikonę menu lub przewiń aby rozpocząć!
         .arrow.anim-fade: img(src='images/arrow-2px.png', alt='Arrow')
       section.fp-auto-height-responsive.section(data-anchor='about')
         .container-1240
@@ -34,7 +35,7 @@ html(lang='pl')
           img(src='images/me.jpg', alt='me').anim-top
           .anim-top
             p Nazywam się Paweł Januszkiewicz i aspiruje do miana front-end developera.
-            p Zainteresowanie technologiami webowymi towarzyszyło mi jeszcze od czasów gimnazjum, niestety było niejako tłem dla formalnej edukacji.
+            p Zainteresowanie technologiami webowymi towarzyszyło mi od wielu lat, niestety było niejako tłem dla formalnej edukacji.
             p Od ponad pół roku poświęcam cały swój czas na podnoszenie poziomu znajomości technologii front-endowych.
             p Jako kolejny, naturalny krok rozwoju szukam pierwszego stażu/pracy w komercyjnej firmie.
             p Aktualnie jestem skupiony na doskonaleniu umiejętności programowania w JS oraz na nauce korzystania z narzędzia automatyzacji pracy Gulp.
@@ -55,8 +56,9 @@ html(lang='pl')
               h3 CSS + SASS
               ul
                 li Znajomość właściwości CSS oraz działania selektorów
-                li Umiejętność korzystania z dokumentacji 
-                  strong (MDN)
+                li Umiejętność pisania stron responsywnych (wykorzystywanie tzw. 
+                  strong "media queries"
+                  | )
                 li Ogólna znajomość 
                   strong Flexboxa
                 li Korzystam z preprocesora 
@@ -76,13 +78,13 @@ html(lang='pl')
                 strong Git
                 |  (podstawowe polecenia w konsoli), narzędzia 
                 strong DevTools
-                |  w Chromie oraz  
+                |  w Chromie oraz 
                 strong Gulpa
                 |  (początki pracy z tą technologią)
       section.fp-auto-height-responsive.section(data-anchor='js')
         .container-1240
           h1.anim-top JS
-          p.anim-top Projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
+          p.anim-top Przygotowane przeze mnie projekty demonstracyjne z wykorzystaniem JS (przygotowane z myślą o dużych ekranach)
           .flex-projects
             .box.anim-top
               a(href='/15puzzles', target='_blank').image
@@ -92,7 +94,7 @@ html(lang='pl')
               p Układanka oparta na "natywnym" JS
               .buttons
                 a(href='/15puzzles', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/15puzzles', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/15puzzles', target='_blank').btn.btn-code Źródło
             .box.anim-top
               a(href='/gallerySquares', target='_blank').image
                 img(src='images/gallerySquares.jpg', alt='Gallery')
@@ -101,16 +103,16 @@ html(lang='pl')
               p Galeria zdjęć oparta o jQuery
               .buttons
                 a(href='/gallerySquares', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/gallerySquares', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/gallerySquares', target='_blank').btn.btn-code Źródło
             .box.anim-top
               a(href='/stickyNotes', target='_blank').image
                 img(src='images/stickyNotes.jpg', alt='Sticky Notes')
                 div Demo
               h2 Sticky Notes
-              p Projekt oparty o natywny JS (nowe metody DOM)
+              p Projekt oparty o "natywny" JS (nowe metody DOM)
               .buttons
                 a(href='/stickyNotes', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/stickyNotes', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/stickyNotes', target='_blank').btn.btn-code Źródło
       section.fp-auto-height-responsive.section(data-anchor='psd')
         .container-1240
           h1.anim-top PSD to HTML
@@ -128,7 +130,7 @@ html(lang='pl')
               p Layout oparty o opływanie elementów
               .buttons
                 a(href='/astoundingPsd', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/astoundingPsd', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/astoundingPsd', target='_blank').btn.btn-code Źródło
             .box.anim-top
               a(href='/bicyclesPsd', target='_blank').image
                 img(src='images/bicycles.jpg', alt='Bicycles')
@@ -137,7 +139,7 @@ html(lang='pl')
               p Układ strony oparty głównie na Flexboxie
               .buttons
                 a(href='/bicyclesPsd', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/bicyclesPsd', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/bicyclesPsd', target='_blank').btn.btn-code Źródło
             .box.anim-top
               a(href='utopicFlowersPsd', target='_blank').image
                 img(src='images/utopic.jpg', alt='Utopic Flowers')
@@ -146,17 +148,17 @@ html(lang='pl')
               p Strona z szablonu PSD
               .buttons
                 a(href='/utopicFlowersPsd', target='_blank').btn.btn-demo Demo
-                a(href='https://github.com/paweljanuszkiewicz/utopicFlowersPsd', target='_blank').btn.btn-code Code
+                a(href='https://github.com/paweljanuszkiewicz/utopicFlowersPsd', target='_blank').btn.btn-code Źródło
         .arrow.anim-fade: img(src='images/arrow-2px.png', alt='Arrow')
       section.fp-auto-height-responsive.section(data-anchor='contact')
         .hover-section
           a(href='mailto:pawel.januszkiewicz@outlook.com').mail: h1#mail pawel.januszkiewicz@outlook.com
           .copy-section
-            button#copy(data-clipboard-action='copy', data-clipboard-target='#mail') Copy mail!
-            span.copied Copied!
+            button#copy(data-clipboard-action='copy', data-clipboard-target='#mail') Skopiuj do schowka!
+            span.copied Gotowe!
         footer
-          p  ... or see the website source here
-          a(href='https://github.com/paweljanuszkiewicz/paweljanuszkiewicz.github.io').btn.btn-code Code
+          p  ... lub zajrzyj w kod tej strony
+          a(href='https://github.com/paweljanuszkiewicz/paweljanuszkiewicz.github.io').btn.btn-code Źródło
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
     script(src='js/jquery.fullPage.min.js')
