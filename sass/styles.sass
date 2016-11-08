@@ -59,9 +59,9 @@ $arrowOpacity: .4
     transform: translateY(0)
     opacity: $arrowOpacity
 
-@media (min-width: $medium) and (min-height: $minHeight)
-  .arrow
-    display: block
+// @media (min-width: $medium) and (min-height: $minHeight)
+.arrow
+  display: block
 
 // SECTIONS
 //  all
@@ -310,11 +310,9 @@ section[data-anchor='skills']
 //  psd padding + arrow
 section[data-anchor='psd']
   position: relative
-  padding-bottom: 40px
-@media (min-width: $medium)
-  section[data-anchor='psd']
-    padding-bottom: 140px
-@media (min-width: $mobileMenu)
+  padding-bottom: 120px
+
+@media (min-width: $mobileMenu) and (min-height: $minHeight)
   section[data-anchor='psd']
     padding-bottom: 0
 
