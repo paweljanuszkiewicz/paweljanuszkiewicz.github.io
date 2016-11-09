@@ -1,0 +1,173 @@
+doctype html
+html(lang='pl')
+  head
+    title Paweł Januszkiewicz
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/styles.css')
+    link(rel='stylesheet', href='../css/jquery.fullPage.css')
+    //- link(rel='shortcut icon', href='')
+  body
+    aside.anim-fade
+      nav
+        ul
+          li: a(href='#start') Start
+          li: a(href='#about') About
+          li: a(href='#skills') Skills
+          li: a(href='#js') JavaScript
+          li: a(href='#psd') PSD to HTML
+          li: a(href='#contact') Contact
+      .icon
+        .hamburger: div
+    #fullpage.container-1920
+      section.section(data-anchor='start')
+        .lang.anim-fade
+          span.en en
+          | &nbsp;&nbsp;|&nbsp;&nbsp;
+          span.pl pl
+        .container-1240
+          h1.anim-top Welcome!
+          p.anim-top Click on menu or 
+            span.phone-slide slide
+            span.scroll scroll
+            | !
+        .arrow.anim-fade: img(src='../images/arrow-2px.png', alt='Arrow')
+      section.fp-auto-height-responsive.section(data-anchor='about')
+        .container-1240
+          h1.anim-top About
+          img(src='../images/me.jpg', alt='Me').anim-top
+          .anim-top
+            p My name is Paweł Januszkiewicz and I aspire to be a front-end developer.
+            p I was interesting in web technologies for many years, unfortunatelly it was a background of my formal education.
+            p For about half a year I have been improving my knowledge of front-end technologies.
+            p As a next, natural step in my progress, I am looking for my first job (or practice) in commercial company.
+            p Currently I am focused on improving my programming skills in JS and on learning a usage of a Gulp tool.
+            p I care about aesthetics in my projects and I do my best to make them intuitive as far as possible.
+            p Besides, I am improving my knowledge of UI and UX design.
+      section.fp-auto-height-responsive.section(data-anchor='skills')
+        .container-1240
+          h1.anim-top Skills
+          p.anim-top A list present my overall skills and tools which I use
+          .left
+            .anim-top
+              h3 HTML + Jade/Pug
+              ul
+                li Knownledge of the most frequently used 
+                  strong HTML
+                  |  tags
+                li I use 
+                  strong Jade/Pug
+                  |  preprocessor
+            .anim-top
+              h3 CSS + SASS
+              ul
+                li Knownledge of the most usefull CSS properties and selectors working
+                li Responsive Web Design (usage of 
+                  strong "media queries"
+                  | )
+                li Overall knowledge of 
+                  strong Flexbox
+                li I use 
+                  strong SASS
+                  |  preprocessor
+          .anim-top
+            h3 JavaScript + jQuery
+            ul
+              li Implementing operations on DOM tree (looking for elements, edition elements by CSS, adding/removing CSS classes), responsing to events in jQuery and in "vanilla" JS
+          .anim-top
+            h3 Others
+            ul
+              li I also use:  
+                strong Atom
+                |  editor, 
+                strong Adobe Photoshop
+                |  (layers, main tools, slices), 
+                strong Git
+                |  repository (basic terminal usage),  
+                strong DevTools
+                |  in Chromie and  
+                strong Gulp
+                |  (begginings of a work)
+      section.fp-auto-height-responsive.section(data-anchor='js')
+        .container-1240
+          h1.anim-top JS
+          p.anim-top Demo JS projects, prepared by me (optimized to work on desktops)
+          .flex-projects
+            .box.anim-top
+              a(href='/15puzzles', target='_blank').image
+                img(src='../images/15puzzles.jpg', alt='15puzzles')
+                div Demo
+              h2 15 puzzles
+              p Puzzles based on JS
+              .buttons
+                a(href='/15puzzles', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/15puzzles', target='_blank').btn.btn-code Code
+            .box.anim-top
+              a(href='/gallerySquares', target='_blank').image
+                img(src='../images/gallerySquares.jpg', alt='Gallery')
+                div Demo
+              h2 Gallery
+              p Photogallery based on jQuery
+              .buttons
+                a(href='/gallerySquares', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/gallerySquares', target='_blank').btn.btn-code Code
+            .box.anim-top
+              a(href='/stickyNotes', target='_blank').image
+                img(src='../images/stickyNotes.jpg', alt='Sticky Notes')
+                div Demo
+              h2 Sticky Notes
+              p Project based on JS (new DOM methods)
+              .buttons
+                a(href='/stickyNotes', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/stickyNotes', target='_blank').btn.btn-code Code
+      section.fp-auto-height-responsive.section(data-anchor='psd')
+        .container-1240
+          h1.anim-top PSD to HTML
+          p.anim-top Responsive, single pages, based on PSD templates (you can find these on 
+            a(href='http://www.os-templates.com/') www.os-templates.com
+            |  and 
+            a(href='http://www.yebocreative.com/') www.yebocreative.com
+            | ); full licences available in psd/ folders of each project source
+          .flex-projects
+            .box.anim-top
+              a(href='/astoundingPsd', target='_blank').image
+                img(src='../images/astounding.jpg', alt='Astounding')
+                div Demo
+              h2 Astounding
+              p Layout based on floating elements
+              .buttons
+                a(href='/astoundingPsd', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/astoundingPsd', target='_blank').btn.btn-code Code
+            .box.anim-top
+              a(href='/bicyclesPsd', target='_blank').image
+                img(src='../images/bicycles.jpg', alt='Bicycles')
+                div Demo
+              h2 Bicycles
+              p Layout based mainly on Flexbox
+              .buttons
+                a(href='/bicyclesPsd', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/bicyclesPsd', target='_blank').btn.btn-code Code
+            .box.anim-top
+              a(href='utopicFlowersPsd', target='_blank').image
+                img(src='../images/utopic.jpg', alt='Utopic Flowers')
+                div Demo
+              h2 Utopic Flowers
+              p Website from PSD template
+              .buttons
+                a(href='/utopicFlowersPsd', target='_blank').btn.btn-demo Demo
+                a(href='https://github.com/paweljanuszkiewicz/utopicFlowersPsd', target='_blank').btn.btn-code Code
+        .arrow.anim-fade: img(src='../images/arrow-2px.png', alt='Arrow')
+      section.fp-auto-height-responsive.section(data-anchor='contact')
+        .hover-section
+          a(href='mailto:pawel.januszkiewicz@outlook.com').mail: h1#mail pawel.januszkiewicz@outlook.com
+          .copy-section
+            button#copy(data-clipboard-action='copy', data-clipboard-target='#mail') Copy mail!
+            span.copied Copied!
+        footer
+          p  ... or see the website source here
+          a(href='https://github.com/paweljanuszkiewicz/paweljanuszkiewicz.github.io').btn.btn-code Code
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src='../js/jquery.fullPage.min.js')
+    script(src='../js/clipboard.min.js')
+    script(src='../js/script.js')

@@ -149,6 +149,10 @@ section[data-anchor='start']
     padding-bottom: 6px
   p
     margin-bottom: 60px
+  .phone-slide
+    display: inline
+  .scroll
+    display: none
 .lang
   color: $grey
   position: absolute
@@ -164,7 +168,22 @@ section[data-anchor='start']
 .en:hover, .pl:hover
   color: $black
 
+@media #{$mediumScreen}
+  section[data-anchor='start']
+    .phone-slide
+      display: inline
+    .scroll::before
+      content: '/'
+    .scroll
+      display: inline
 @media #{$largeScreen}
+  section[data-anchor='start']
+    .phone-slide
+      display: none
+    .scroll::before
+      content: ''
+    .scroll
+      display: inline
   .lang
     right: auto
     left: 20px
