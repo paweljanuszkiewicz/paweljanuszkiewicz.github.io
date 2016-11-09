@@ -41,7 +41,7 @@ nav
     font-size: .7rem
     font-weight: 400
     +caps
-    &:active
+    &:active, &:hover
       background-color: rgba($lightgrey, .5)
 
 @media #{$largeScreen}
@@ -108,6 +108,8 @@ nav
       font-size: 1rem
       position: relative
       width: auto
+      &:active, &:hover
+        background: none
       &::after
         content: ''
         background-color: $black

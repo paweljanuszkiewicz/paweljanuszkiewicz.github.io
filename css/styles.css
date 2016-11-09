@@ -140,7 +140,7 @@ nav {
     font-size: 0.7rem;
     font-weight: 400;
     text-transform: uppercase; }
-    nav a:active {
+    nav a:active, nav a:hover {
       background-color: rgba(207, 207, 207, 0.5); }
 
 @media (min-width: 1200px) and (min-height: 798px) {
@@ -228,6 +228,8 @@ nav {
       font-size: 1rem;
       position: relative;
       width: auto; }
+      nav a:active, nav a:hover {
+        background: none; }
       nav a::after {
         content: "";
         background-color: #010101;
@@ -254,6 +256,7 @@ body {
 
 .container-1240 {
   margin: 0 auto;
+  width: auto;
   max-width: 1240px; }
 
 .arrow {
@@ -454,12 +457,11 @@ section[data-anchor='about'] img {
   display: block;
   width: 280px;
   height: 280px;
-  margin: 20px auto 40px auto;
+  margin: 10px auto 40px auto;
   border-radius: 50%; }
 
 @media (min-width: 640px) {
   section[data-anchor='about'] img {
-    margin-top: 30px;
     margin-right: 80px;
     float: left; } }
 section[data-anchor='skills'] h3 {
