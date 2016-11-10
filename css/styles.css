@@ -257,8 +257,7 @@ body {
 .container-1240 {
   margin: 0 auto;
   width: auto;
-  max-width: 1240px;
-  border: 1px dashed grey; }
+  max-width: 1240px; }
 
 .arrow {
   position: absolute;
@@ -436,8 +435,7 @@ section[data-anchor='start'] {
     padding-bottom: 6px; }
   section[data-anchor='start'] p {
     margin-bottom: 60px;
-    min-width: 300px;
-    border: 1px solid red; }
+    min-width: 300px; }
   section[data-anchor='start'] .phone-slide {
     display: inline; }
   section[data-anchor='start'] .scroll {
