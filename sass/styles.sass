@@ -24,6 +24,7 @@ body
   margin: 0 auto
   width: auto
   max-width: 1240px
+  +mark2
     
 //arrow
 $arrowOpacity: .4
@@ -135,6 +136,26 @@ section
 strong
   border-bottom: 1px dashed $grey
 
+.lang
+  color: $grey
+  position: absolute
+  font-weight: 300
+  letter-spacing: .12rem
+  font-size: .9rem
+  top: 18px
+  right: 16px
+  z-index: 2
+  +caps
+  a
+    color: $grey
+    border: 0
+    text-decoration: none
+.en, .pl
+  cursor: pointer
+  transition: color 400ms ease
+.en:hover, .pl:hover
+  color: $black
+  
 //  start
 section[data-anchor='start']
   display: flex
@@ -150,27 +171,12 @@ section[data-anchor='start']
     padding-bottom: 6px
   p
     margin-bottom: 60px
+    min-width: 300px  // WP8 IE 'centering'
+    +mark
   .phone-slide
     display: inline
   .scroll
     display: none
-.lang
-  color: $grey
-  position: absolute
-  font-weight: 300
-  letter-spacing: .12rem
-  font-size: .9rem
-  top: 18px
-  right: 16px
-  +caps
-  a
-    color: $grey
-    border: 0
-.en, .pl
-  cursor: pointer
-  transition: color 400ms ease
-.en:hover, .pl:hover
-  color: $black
 
 @media #{$mediumScreen}
   section[data-anchor='start']
