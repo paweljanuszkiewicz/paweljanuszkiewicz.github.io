@@ -427,6 +427,9 @@ section[data-anchor='start'] {
   top: 18px;
   right: 16px;
   text-transform: uppercase; }
+  .lang a {
+    color: #8b8b8b;
+    border: 0; }
 
 .en, .pl {
   cursor: pointer;
