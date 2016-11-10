@@ -88,10 +88,11 @@ $(document).ready(function() {
   });
 
   $.fn.menuShow = function () {
+    $('.lang').css('z-index', '0');   // hide "EN PL" lang under showing menu
     var $nav = $(this).parent().parent('aside').find('nav');
     $nav.addClass('active');
     $nav.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
-      $nav.find('li').each(function (index) {
+      $nav.find('li').each(function (index) {   
         $(this).css('transition-delay', index * 100 + 'ms');
         $(this).addClass('show');
       });
@@ -103,6 +104,9 @@ $(document).ready(function() {
     $nav.removeClass('active');
     $(this).removeClass('active');
     $nav.find('li').css('transition-delay', 0 + 'ms').removeClass('show');
+    $nav.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+      $('.lang').css('z-index', '2'); // show "EN PL" on top of aside after transition
+    });
   }
 
   // clipboard

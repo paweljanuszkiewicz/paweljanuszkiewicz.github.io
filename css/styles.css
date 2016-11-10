@@ -93,7 +93,6 @@ aside {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -105,7 +104,8 @@ aside {
           justify-content: space-between;
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+          flex-direction: row-reverse;
+  z-index: 1; }
 
 .icon {
   background-color: transparent;
