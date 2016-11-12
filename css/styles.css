@@ -482,7 +482,10 @@ section[data-anchor='skills'] p {
 
   .right {
     float: right;
-    width: 50%; } }
+    width: 50%; }
+
+  .clear {
+    clear: both; } }
 .flex-projects {
   display: -webkit-flex;
   display: -ms-flexbox;
