@@ -48,8 +48,10 @@ $(document).ready(function() {
     if ($animTop.hasClass('end'))
       return;
     var $animFade = $section.find('.anim-fade');
-    if (section == 'start')
+    if (section == 'start') {
       $animFade =  $animFade.add('aside.anim-fade');
+      $animFade =  $animFade.add('.lang.anim-fade');
+    }
     var wait = $animTop.length * animationDelay;
       $animTop.each(function (index) {
       $(this).css('transition-delay', animationDelay * index + 'ms').addClass('end');
