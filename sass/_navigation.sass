@@ -94,13 +94,13 @@ nav
       &.show
         transform: none
         opacity: 1
-    li::before
+    li:not(.hash-not)::before
       content: '# '
     li:first-child > a
       padding-top: 0
     li:last-child
       padding-bottom: 0
-    a
+    a:not(.cv)
       padding: 0
       padding-top: 20px
       text-transform: none
