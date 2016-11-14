@@ -337,7 +337,8 @@ body {
     text-align: left;
     margin-top: 40px;
     padding-left: 0;
-    position: absolute; }
+    position: absolute;
+    transition: color 300ms ease; }
 
   .cv::after {
     content: "";
@@ -346,7 +347,11 @@ body {
   .cv::before {
     content: url("../images/pdf32.png");
     vertical-align: -40%;
-    padding-right: 8px; } }
+    padding-right: 8px; }
+
+  .cv:hover {
+    background-color: transparent;
+    color: #8b8b8b; } }
 section {
   display: block;
   margin-bottom: 60px; }

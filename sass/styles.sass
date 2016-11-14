@@ -81,6 +81,7 @@ $arrowOpacity: .4
     margin-top: 40px
     padding-left: 0
     position: absolute  // out of flow, nav li elements centered verically
+    transition: color 300ms ease
   .cv::after
     content: ''
     padding-left: 0
@@ -88,6 +89,9 @@ $arrowOpacity: .4
     content: url('../images/pdf32.png')
     vertical-align: -40%
     padding-right: 8px
+  .cv:hover
+    background-color: transparent
+    color: $grey
 // SECTIONS
 //  all
 section
