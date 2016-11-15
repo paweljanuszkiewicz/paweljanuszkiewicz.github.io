@@ -249,8 +249,10 @@ html {
 body {
   background-color: #fff; }
 
+#fullpage {
+  margin: 0 auto; }
+
 .container-1920 {
-  margin: 0 auto;
   max-width: 1920px; }
 
 .container-1240 {
