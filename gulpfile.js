@@ -40,6 +40,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function () {
   gulp.watch('sass/*.sass', ['sass']);
   gulp.watch('*.pug', ['pug']);
+  gulp.watch('en/*.pug', ['pug']);
   gulp.watch('js/*.js', ['js']);
 });
 

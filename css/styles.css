@@ -213,13 +213,13 @@ nav {
             -ms-transform: none;
                 transform: none;
         opacity: 1; }
-    nav li:not(.hash-not)::before {
+    nav li::before {
       content: "# "; }
     nav li:first-child > a {
       padding-top: 0; }
     nav li:last-child {
       padding-bottom: 0; }
-    nav a:not(.cv) {
+    nav a {
       padding: 0;
       padding-top: 20px;
       text-transform: none;
@@ -227,9 +227,9 @@ nav {
       font-size: 1rem;
       position: relative;
       width: auto; }
-      nav a:not(.cv):active, nav a:not(.cv):hover {
+      nav a:active, nav a:hover {
         background: none; }
-      nav a:not(.cv)::after {
+      nav a::after {
         content: "";
         background-color: #010101;
         width: 0;
@@ -239,7 +239,7 @@ nav {
         bottom: -4px;
         z-index: 0;
         transition: width 400ms ease; }
-      nav a:not(.cv):hover::after, nav a:not(.cv).active::after {
+      nav a:hover::after, nav a.active::after {
         width: 100%; } }
 html {
   font-size: 24px;
@@ -318,40 +318,6 @@ body {
 .arrow {
   display: block; }
 
-.cv {
-  color: #333634;
-  text-align: right;
-  padding-right: 12px;
-  background-color: #e9e9e9;
-  font-size: 0.6rem;
-  text-transform: none; }
-
-.cv::after {
-  content: ".pdf";
-  padding-left: 6px; }
-
-@media (min-width: 1200px) and (min-height: 798px) {
-  .cv {
-    font-size: 0.8rem;
-    background-color: transparent;
-    text-align: left;
-    margin-top: 40px;
-    padding-left: 0;
-    position: absolute;
-    transition: color 300ms ease; }
-
-  .cv::after {
-    content: "";
-    padding-left: 0; }
-
-  .cv::before {
-    content: url("../images/pdf32.png");
-    vertical-align: -40%;
-    padding-right: 8px; }
-
-  .cv:hover {
-    background-color: transparent;
-    color: #8b8b8b; } }
 section {
   display: block;
   margin-bottom: 60px; }
